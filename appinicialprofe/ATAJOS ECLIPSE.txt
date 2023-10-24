@@ -1,0 +1,49 @@
+ATAJOS ÚTILES PARA EL IDE ECLIPSE (ENTORNO INTEGRADO DE DESARROLLO AMPLIAMENTE USADO EN LA CONSTRUCCIÓN DE APLICACIONES JAVA, Y QUE NOSOTROS USAREMOS EN EL CURSO ;)
+
+CTRL+S --> Guarda el archivo y lo recompila automáticamente siempre que tengamos activada la opción de Build automatically -en la Opción del menú Porject-
+
+CTRL+D --> Elmina la línea donde está el cursor
+
+F3 --> Situado el cursor sobre el nombre de un método, clase, o variable, al pulsar esta tecla, el editor nos lleva a la definición de ese método, clase o variable. Muy útil cuando necesitamos ver la descripción de algún elemento
+
+CTRL+F11-->Ejecutamos nuestro programa (Se empezará ejecutando la clase que tenga el método main())
+
+CTRL+A --> Sirve para seleccionar todo el texto que visualizamos en la pantalla.
+
+CTRL+C --> Copiar el texto seleccionado
+
+CTRL+V --> Pegar el texto seleccionado
+
+CTRL+X --> CORTAR
+
+CTRL+SHIFT+T --> Nos da acceso a un menú de búsquedas, donde indicando parte o el nombre de una clase, nos indicará su ubación y nos permitirá abrirlo. Útil cuando tenemos muchas clases y no recordamos su nombre con exactitud
+
+CTRL+SPACE --> Mientras escribimos cualquier nombre o sentencia, al pulsar esta combinación, el propio Eclipse nos desplegará un menú con las opciones que pueden ir a continuación, pudiendo seleccionarlas y pasando a escribirse automáticamente. Comando muy útil cuando desconemos los métodos que aplican a un objeto y queremos ver las opciones que tenemos, o bien cuando queremos construir bucles de forma sencilla (ej: for CTRL+SPACE y nos saldrá la opción de escribir un for) 
+
+Menú WINDOW--> Reset Perspective: Cuando estamos en una determinada perspectiva de Eclipse (Navigator, Package, Debug, etc..) y sin querer hemos movido alguna ventana o elemento, esta opción será muy útil para restaurar todas las ventanas a su estado original.
+
+Menú SEARCH-->File:Nos ayuda a localizar archivos, de nuestro workspace (directorio de trabajo) o de nuestro proyecto (carpeta concreta de nuestro directorio de trabajo), pudiendo realizar la búsqueda por partes del nombre o contenido. Muy útil, por ejemplo, si necesitamos buscar algún archivo y no recordamos su nombre, pero sí parte de su contenido. Nos permite usar caracteres comodín (*)
+
+FIND REFERENCES Botón derecho sobre el nombre de un método --> References: Este comando, nos ayudará a ver desde dónde se invoca el método que estamos seleccionado.
+
+GENERATE Getters&Setters Botón derecho sobre un espacio en blanco, cuando estamos definiendo una clase y ya hemos definido sus atributos: Source-->Generate Getters and Setters. Nos permite generar automáticamente los métodos get y set para cada atributo definido
+
+REFACTOR Botón derecho sobre un identificador (nombre) de variable o clase+ Refactor o bien ALT+SHIFT+R: Mediante esta opción, podemos modificar la nomenclatura del identificador seleccionado, actualizándose de forma automática el nombre en todas las partes donde se ha utilizado. Útil cuando nos hemos confundido o queremos cambiar el nombre de alguna clase o variable.
+ALT+SHIFT+R
+
+(Estando en modo DEBUG) F6 --> Pasamos instrucción por instrucción del método donde hemos puesto el punto de ruptura
+			F5 --> Si la instrucción es un método, el debug nos mete en la definición y ejecución del método, pudiendo observar el comportamiento con detalle	
+			F8 --> Le decimos al depurador (Debugger), que queremos saltar hasta el siguiente punto de ruptura (si no hay más, hasta el final)
+
+CTRL+Z --> DESHACER
+CTRL+Y --> REHACER
+CTRL+I --> IDENTA EL CÓDIGO
+CTRL+SHIT+F --> IDENTA EL CÓDIGO Y PONE INTROS!!
+CTRL+7 --> COMENTA UNA LÍENA O VARIAS SELECCIONADAS
+ALT + FLECHA UP/DOWN --> ESTANDO EN UNA LÍNEA, LA DESPLAZA HACIA ARRIBA/HACIA ABAJO AUTOMÁTICAMENTE!
+CTRL+ALT+ FLECHA UP/DOWN --> DUPLICA HACIA/ARRIBA O HACIA ABAJO, LA LÍNEA DONDE ESTÁ EL CURSOR
+CTRL+REPAG --> PASA A LA SIGUIENTE PESTAÑA
+CTRL+AVPAG --> PASA A LA PESTAÑA PREVIA
+CTRL+SHIFT+X --> TE PASA A MAYÚSCULA EL TEXTO SELECCIONADO
+CTRL+SHIFT+Y --> TE PASA A MINÚSCULA EL TEXTO SELECCIONADO
+CLTR+F --> PARA BUSCAR EN LA PESTAÑA ACTUAL UNA CADENA

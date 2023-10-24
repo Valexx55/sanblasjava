@@ -1,0 +1,36 @@
+IDE.- Integrated Development Enviroment
+      Entorno Integrado de Desarrollo
+      "El programa que usamos para programar"
+      Eclipse en nuestro caso
+      
+.java .- Extensión del código fuente de una clase
+.class .- Extensión del bytecode código máquina de una clase
+.jar .- Conjunto de .class comprimidos (zip)
+
+PascalCase .- Nomenclatura para clases
+camelCase .- Nomenclatura para métodos
+
+método .- o función un programa chiquitín
+
+PASOS PARA DEFINIR UNA FUNCIÓN o MÉTODO
+1)Definimos un nombre identificativo
+2) Entradas : qué dato recibo/necesito para mi
+   función
+3) Salidas: Qué devuevlo ( a veces nada )
+
+Clase : Concepto / Tipo
+Objecto: Instancia de clase
+
+JDK: Java Development Kit 
+     Paquete de software que incluye 
+     Todo lo necesario para poder programar 
+     en Java y ejecutar
+     
+JSE : Java Standard Edition
+      Todas las clases que vienen de serie
+      17
+      
+Herencia/Object
+
+Paquete: "Carpeta" que contiene clases relacionadas
+
