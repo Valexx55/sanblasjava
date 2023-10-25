@@ -17,7 +17,13 @@ import java.util.Scanner;
  * PEJ: 22.35 IDEAL
  */
 public class MainIMCFunciones {
-
+	
+	/**
+	 * Pedimos el peso al usuario
+	 * por la entrada estándar (teclado)
+	 * 
+	 * @return el peso introducido
+	 */
 	public static float pedirPeso() {
 		float peso = 0;
 		Scanner scanner = null;
@@ -28,7 +34,12 @@ public class MainIMCFunciones {
 
 		return peso;
 	}
-
+	/**
+	 * Pedimos el altura al usuario
+	 * por la entrada estándar (teclado)
+	 * 
+	 * @return la altura introducido
+	 */
 	public static float pedirAltura() {
 		float altura = 0;
 		Scanner scanner = null;
@@ -40,9 +51,19 @@ public class MainIMCFunciones {
 		return altura;
 
 	}
-
+     
+	/**
+	 * 
+	 * Función para caluclar el IMC de una perona
+	 * conocido su peso y su altura
+	 * 
+	 * @param peso el peso en kg
+	 * @param altura la altura en m
+	 * @return el imc en formato decimal
+	 */
 	public static double calcularImcNumerico(float peso, float altura) {
 		double imcnum = 0;
+
 
 		imcnum = peso / Math.pow(altura, 2);
 
@@ -50,7 +71,14 @@ public class MainIMCFunciones {
 		
 
 	}
-
+	
+	/**
+	 * Calcula el imcNominal teniendo en cuenta
+	 * el imcNumerico que ha devuelto calcularImcNumerico
+	 * 
+	 * @param imcNumerico
+	 * @return imcNominal
+	 */
 	public static String calcularIMCNominal(double imcnum) {
 		String imcNominal = null;
 
@@ -68,6 +96,13 @@ public class MainIMCFunciones {
 
 		return imcNominal;
 	}
+	
+	/**
+	 * Imprime la frase acorde al imcNumerico e imcNominal
+	 * 
+	 * @param imcNumerico
+	 * @param imcNominal
+	 */
 	
 	public static void informarIMC (String imcNominal, double imcNumerico)
 	{

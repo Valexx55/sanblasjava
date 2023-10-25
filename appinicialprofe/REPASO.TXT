@@ -40,4 +40,4 @@ de un método o función deben ser inicializadas
 int, float, numero --> 0
 char --> ' '
 String / cualquier objeto --> null
-
+boolean --> false
