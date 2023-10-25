@@ -34,3 +34,10 @@ Herencia/Object
 
 Paquete: "Carpeta" que contiene clases relacionadas
 
+INICIALIZAR: Todas las variables locales
+de un método o función deben ser inicializadas
+
+int, float, numero --> 0
+char --> ' '
+String / cualquier objeto --> null
+
