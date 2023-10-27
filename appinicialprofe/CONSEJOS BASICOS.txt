@@ -1,0 +1,89 @@
+1 Above all, think first WHAT you want to GET, 
+separating it of HOW you will get it. 
+Ideally, you should use a formal language (as UML), 
+but any kind of mock is welcome to express the functionality 
+expected.
+
+1 ENTIENDE BIEN QUÉ TIENES QUÉ HACER ANTES DE
+EMPEZAR A PROGRAMAR
+
+
+
+2 Once you get a clear idea about WHAT to do, spend some time 
+giving some thoughts about HOW to do it. At least, you will always 
+find two or more ways to do the same task, and one of them, 
+will be better than the others (more efficient, logical or reusable)
+
+2 PLANTEAMOS CÓMO VAMOS A RESOLVER EL OBJETIVO
+DEFINIDO EN EL PUNTO 1
+
+
+3Don’t forget to make always comments in your code. 
+It will be helpfull; even for yourself
+
+3 COMENTARIOS DESCRIPTIVOS EN EL CÓDIGO A MUERTE
+
+
+ 
+Use representative identifiers, naming variables, classes 
+and functions properly. Don’t mind if an identifier becomes a 
+bit long.
+
+4 USAR NOMBRES DESCRIPTIVOS 
+PARA VARIABLES, CLASES FUNCIONES
+
+
+
+Test your code every few lines. For sure, eventually, you will 
+have to do formal unit and integrated tests, but, try to get 
+used to testing every bit.Otherwise, you could lose too much 
+time after.
+
+5 NO ESPERES A TERMINAR EL PROGRAMA / LA FUNCIONALIDAD
+PARA PROBARLO. VE PROBANDO DE POQUITO A POQUITO
+
+
+
+If a function takes up more than a screen, try to divide it. 
+It will be always better and easier to maintain.
+
+6 DIVIDE EL CÓDIGO EN FUNCIONES PEQUEÑAS
+
+
+
+Keep a “Main” always available: If you are not sure about how a 
+function or a library works, keep it simple: give it a try.
+
+7 HAZ PRUEBAS DE CÓDIGO EN CLASES APARTE
+
+
+Ctrl + S: Please, make always a backup of your work day. 
+Using an external repository, is a must.
+
+8 USA GITHUB O ALGO PARECIDO
+
+
+If you could define a data as constant, or property, do it. 
+The more constants you use, the better code you will get.
+
+9 DEFINE CONSTANTES SIEMPRE QUE PUEDAS
+
+If you become very confused with some algorithm, stop thinking 
+about it. Take a breath! Although you aren’t aware of it, your
+mind will continue working in the background and will resolve 
+it magically. Eureka! 
+
+10 SI TE RALLAS, HAZ UN DESCANSO O HABLA CON UN COMPAÑERO
+
+
+
+EXTRA (+1) Last but not least «Divide and conquer». 
+Try always to subdivide each process into smaller ones. 
+For each one of these subprocesses, 
+identify clearly INPUT, OUTPUT and FUNCTION, before start coding.
+
+11 AL PLANTEAR UNA FUNCIÓN, HAY QUE PENSAR
+NOMBRE
+ENTRADAS
+Y SALIDAS
+

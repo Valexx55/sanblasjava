@@ -25,6 +25,8 @@ import java.util.Scanner;
  */
 
 public class AdivinaNumero {
+	
+	public static final int MAXIMO_INTENTOS = 2;
 
 	public static int pedirNumeroUsuario() {
 		int numeroUsuario = 0;
@@ -55,7 +57,7 @@ public class AdivinaNumero {
 		// 2 inicio vidas
 		
 		int numeroUsuario =0;
-		int vidas = 5;// REPRESENTA los intentos que restan al usuario
+		int vidas = MAXIMO_INTENTOS;// REPRESENTA los intentos que restan al usuario
 		do {
 			// 3 pedir numero usuario
 		
@@ -77,7 +79,7 @@ public class AdivinaNumero {
 				vidas = vidas - 1;// vidas--;
 			}
 
-		} while ((!acertado) && (vidas > 0));// ((acertado==false) && (vidas>0));
+		} while ((!acertado) && (vidas > 0));// ((acertado==false) && (vidas>0)); //hago el bucle mientras no acierte y le queden vidas
 		
 		if (!acertado)
 		{
