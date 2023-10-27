@@ -14,10 +14,9 @@ public class MainCadenas {
 		int longitud = saludo.length();
 		System.out.println("La longitud de la palabra es " + longitud);
 		//RECORRO LA CADENA
-		char letraActual = ' ';
 		for (int indice = 0;indice<longitud;indice++) {
 			//obtengo la letra en curso
-			letraActual = saludo.charAt(indice);
+			char letraActual = saludo.charAt(indice);
 			System.out.println("La letra en la posición " 
 			+indice+ " es "+ letraActual);
 		}
