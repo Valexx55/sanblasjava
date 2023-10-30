@@ -8,5 +8,9 @@ public class MainApuestas {
 		apuesta1.nombreJugador = "ADRI";
 		apuesta1.golesVisitante = 1;
 		apuesta1.golesLocal = 1;
+		
+		Apuesta[] arrayApuestas = new Apuesta[5];
+		
+		arrayApuestas[0] = apuesta1;
 	}
 }
