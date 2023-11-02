@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class MainDni {
 	
+	//Algoritmo https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/dni/calculo-del-digito-de-control-del-nif-nie/
+	
   public static final String SECUENCIA_LETRAS_DNI = "TRWAGMYFPDXBNJZSQVHLCKE";
 	
 	public static void main(String[] args) {
@@ -11,14 +13,14 @@ public class MainDni {
 		//TODO pedir el número del dni
 		//y decirle qué letra tiene
 		//pedir número del dni
-		/*System.out.println("Introduce tu numero de dni");
+		System.out.println("Introduce tu numero de dni");
 		Scanner scanner = new Scanner(System.in);
 		int numdni = scanner.nextInt();
 		System.out.println("DNI INTRO = " + numdni);
 		int resto = numdni%SECUENCIA_LETRAS_DNI.length();
 		System.out.println(resto);
 		char letra = SECUENCIA_LETRAS_DNI.charAt(resto);
-		System.out.println("Su letra es " + letra);*/
+		System.out.println("Su letra es " + letra);
 		
 		
 		Dni dnivale = new Dni(53130984, 'H');
@@ -39,7 +41,28 @@ public class MainDni {
 		int logitudcomida = comida.length();
 		int logitudsaludo = saludoes.length();
 		
+		Dni dniVini = new Dni(50500231);
+		char letraVini = dniVini.calcularLetra();
 		
+		System.out.println("La letra de Vini es " + letraVini);
+		dniVini.setLetra(letraVini);
+		
+		//TODO HACER UN NUEVO MAINDNI LLAMADO MAINDNI2
+		/**
+		 * PARA QUE GENERE 10 DNIS NUEVOS
+		 * CADA NÚMERO DEL DNI SE TIENE QUE GENERAR
+		 * AUTOMÁTICAMENTE /ALEATORIA
+		 * Y PARA CADA DNI, SE TIENE QUE CALCULAR SU LETRA
+		 * 
+		 * EN LA CLASE DNI, SE TIENE QUE LLEVAR LA CUENTA
+		 * DE CUÁNTOS DNIS SE CREAN Y MOSTRARLO AL FINAL
+		 * DE LA EJECUCIÓN
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
 		
 		
 		

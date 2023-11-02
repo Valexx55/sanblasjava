@@ -53,4 +53,19 @@ this.- Palabra reservada del lenguaje, que tiene
       
    2) En cualquier otro ámbito / otra función ó método
       this representa el objeto llamante
+ 
+ 
+ SOBRECARGA / OVERLOAD: Ocurre cuando tengo un mismo método (mismo nombre)
+ con distintos parámetros.
+ 
+ 
+ ATRIBUTOS Y STATIC: Se dice que un atributo es estático si está
+ definido a nivel de Clase (no de objeto) Es decir, está compartido
+ por todos los objetos/instancias de la Clase.
+ 
+ Los otros atributos "dinámicos" son lo que son distintos para cada
+ objeto. Cada objeto tiene los suyos propios.
+ 
+ 
+ 
       

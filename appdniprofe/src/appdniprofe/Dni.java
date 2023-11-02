@@ -2,19 +2,9 @@ package appdniprofe;
 
 public class Dni {
 	
-	//TODO EJERCICIO HALLOWEEN
-	//Implementar / programar
-	//dentro de la clase de dni
-	//un método/ una función
-	//calcule la letra de un dni
+	public static final String SECUENCIA_LETRAS_DNI = "TRWAGMYFPDXBNJZSQVHLCKE";
 	
-	//así, desde el main, un programador
-	//puede decir: "calcúlame la letra de ESTE dni"
-	
-	//PENSAD: Nombre, Entradas, Salidas
-	//DIFICIL utilizad bien el this
-	
-	//ATRIBUTOS DE LA CLASE
+	///ATRIBUTOS DE LA CLASE
 	private int numero;
 	private char letra;
 	
@@ -51,6 +41,15 @@ public class Dni {
 		this.letra = letra;
 	}
 	
-	
+	public char calcularLetra()
+	{
+		char letraCalculada= ' ';//20
+		int resto = 0;
+		    
+			resto = this.numero%23;
+			letraCalculada = SECUENCIA_LETRAS_DNI.charAt(resto);
+			
+		return letraCalculada;
+	}
 
 }
