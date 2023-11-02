@@ -8,21 +8,26 @@ public class Dni {
 	private int numero;
 	private char letra;
 	
+	public static int contador;//llevo la cuenta de cuántos DNIS se crean
+	
 	//CONSTRUCTOR 1
 	public Dni(int numero, char letra) {
 		super();
 		this.numero = numero;
 		this.letra = letra;
+		contador++;
 	}
 	//CONSTRUCTOR 2
 	public Dni(int numero) {
 		super();
 		this.numero = numero;
+		contador++;
 	}
 
 	//CONSTRUCTOR POR DEFECTO
 	public Dni() {
 		super();
+		contador++;
 	}
 
 	public int getNumero() {
