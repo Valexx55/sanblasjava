@@ -56,5 +56,19 @@ public class Dni {
 			
 		return letraCalculada;
 	}
+	
+	//TODO hacer un método estático
+	//que reciba un array de dnis
+	//y devuelva el número del mayor
+	
+	public static int obtenerDniMayor(Dni[] arrayDnis)
+	{
+		int dnimayor = 0;
+		
+		return dnimayor;
+	}
+	
+	
+	
 
 }

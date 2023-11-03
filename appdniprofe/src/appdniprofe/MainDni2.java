@@ -28,6 +28,7 @@ public class MainDni2 {
 			//1 generar numero
 			//2 crear dni
 			//3 sacar letra de ese dni
+		Dni[] arrayDnis = new Dni[10]; //me creo un array con espacio para 10 dnis
 		for (int i = 0; i <= 9; i++) {
 			Random random = new Random();
 			int numDni = random.nextInt(MAX_NUMERO_DNI) + 1;
@@ -35,11 +36,19 @@ public class MainDni2 {
 			
 			char letraDNI = dni.calcularLetra();
 			dni.setLetra(letraDNI);
-			
+			//add el dni al array
+			arrayDnis[i] = dni;
 			System.out.println("Tu numero: " + dni.getNumero() + " - " + dni.getLetra());
 		}
 		//TODO imprimir el número total de DNIS creados
 		System.out.println("SE HAN  CREADO " + Dni.contador + " dnis");
+		
+		//VAMOS A LLAMAR A BUSCAR AL MAYOR DE LOS DNIS
+		int nummayor = Dni.obtenerDniMayor(arrayDnis);
+		System.out.println("El mayor DNI es " + nummayor);
+		
+		
+		
 	}
 
 }
