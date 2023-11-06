@@ -1,6 +1,7 @@
 package appconversionprofe;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 /**
  * vamos a hacer una clase para convertir unidades de medida
@@ -25,6 +26,16 @@ public class Conversion {
 	// SHEILA DE € a Soles
 	// Antonio de Yenes a Euro
 
+	private  double redondear (double d)
+	{
+		double nr = 0;
+		
+			DecimalFormat nf = new DecimalFormat("#,###,###.000");
+			 nf.format(d);
+		
+		return nr;
+	}
+	
 	/**
 	 * * Programa que convierte pulgadas a centimetros
 	 * 

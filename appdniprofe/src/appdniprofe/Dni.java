@@ -65,6 +65,46 @@ public class Dni {
 	{
 		int dnimayor = 0;
 		
+		for (int i = 0; i < arrayDnis.length; i++) {
+			
+			//si el numero actual del dni es mayor que mayor
+				//mayor = numero actual del dni
+			
+			if(arrayDnis[i].numero > dnimayor) {
+				dnimayor=arrayDnis[i].numero;
+				
+			}
+		}
+		
+		return dnimayor;
+	}
+	
+	
+	
+	
+	public static int obtenerDniMayorForEach(Dni[] arrayDnis)
+	{
+		int dnimayor = 0;
+		
+		for (Dni dni : arrayDnis)
+		{
+
+			if(dni.numero > dnimayor) {
+				dnimayor=dni.numero;
+				
+			}
+		}
+		/*for (int i = 0; i < arrayDnis.length; i++) {
+			
+			//si el numero actual del dni es mayor que mayor
+				//mayor = numero actual del dni
+			
+			if(arrayDnis[i].numero > dnimayor) {
+				dnimayor=arrayDnis[i].numero;
+				
+			}
+		}*/
+		
 		return dnimayor;
 	}
 	

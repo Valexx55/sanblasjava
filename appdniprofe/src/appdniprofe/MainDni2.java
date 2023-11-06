@@ -40,6 +40,7 @@ public class MainDni2 {
 			arrayDnis[i] = dni;
 			System.out.println("Tu numero: " + dni.getNumero() + " - " + dni.getLetra());
 		}
+		
 		//TODO imprimir el número total de DNIS creados
 		System.out.println("SE HAN  CREADO " + Dni.contador + " dnis");
 		

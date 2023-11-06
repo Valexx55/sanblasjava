@@ -47,6 +47,13 @@ public class MainDni {
 		System.out.println("La letra de Vini es " + letraVini);
 		dniVini.setLetra(letraVini);
 		
+		//letraVini.
+		
+		
+		if  (saludoes.equals(comida)) // (saludoes==comida)
+		{
+			
+		}
 		
 		
 		
