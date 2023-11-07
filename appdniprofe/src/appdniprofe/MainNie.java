@@ -1,8 +1,9 @@
 package appdniprofe;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class MainDniExtranjero {
+public class MainNie {
 
 	public static void main(String[] args) {
 		// TODO pedir un dni extranjero
@@ -13,6 +14,40 @@ public class MainDniExtranjero {
 
 		// https://www.interior.gob.es/opencms/es/servicios-al-ciudadano/tramites-y-gestiones/dni/calculo-del-digito-de-control-del-nif-nie/
 
+//		calcularLetraForma1();
+		calcularLetraForma2();//controlamos los ceros!
+	}
+	
+	public static void calcularLetraForma2 ()
+	{
+		int dniwil = 120994;
+		char letraPrefijo = 'Z';
+		
+			DecimalFormat df = new DecimalFormat("0000000");
+			String dniwilcad = df.format(dniwil);
+			System.out.println(dniwilcad);
+			
+			if (letraPrefijo=='Z')
+			{
+				dniwilcad = "2"+dniwilcad;
+			} else if (letraPrefijo=='Y')
+			{
+				dniwilcad = "1"+dniwilcad;
+			}/*else {
+				// sería poner un cero a la izquieda, que no tiene
+				 * ningún efecto
+			}*/
+			int numero = Integer.parseInt(dniwilcad);
+			int resto = numero%23;
+			char letraFinal = Dni.SECUENCIA_LETRAS_DNI.charAt(resto);
+			System.out.println("La letra final es " + letraFinal);
+			
+			
+	}
+	
+	
+	public static void calcularLetraForma1 ()
+	{
 		Scanner scanner = new Scanner(System.in);// pàra leer de teclado
 
 		// PEIDO NÚMERO
@@ -25,14 +60,7 @@ public class MainDniExtranjero {
 		String letra = scanner.next();
 		String letraMayuscula = letra.toUpperCase();
 
-		/*
-		if (letraMayuscula.equals("X")) {
-			System.out.println("El usuario introdujo X");
-		} else if (letraMayuscula.equals("Y")) {
-			System.out.println("El usuario introdujo Y");
-		} else if (letraMayuscula.equals("Z")) {
-			System.out.println("El usuario introdujo Z");
-		}*/
+	
 
 		switch (letraMayuscula) {
 		case "X":
@@ -58,15 +86,6 @@ public class MainDniExtranjero {
 		int resto = numDniPreparado%23;
 		char letraFinal = Dni.SECUENCIA_LETRAS_DNI.charAt(resto);
 		System.out.println("Su letra final es "+ letraFinal);
-/*
-		// CONVERTIR NÚMERO EN CADENA
-		int n2 = 100;
-		String sn2 = n2 + "";// "100"
-		sn2 = String.valueOf(n2);
-		// CONVERTIR CADENA EN NÚMERO String --> int
-		int n = Integer.parseInt("34234324");
-		System.out.println(n);
-*/
 	}
 
 }
