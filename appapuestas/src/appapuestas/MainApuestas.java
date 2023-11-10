@@ -6,7 +6,10 @@ import appapuestas.bean.Apuesta;
 
 public class MainApuestas {
 	
-	public static final int MAXIMO_APUESTAS = 20;
+	//TODO Controlar que un apostador sólo pueda
+	//registrar una apuesta
+	
+	public static final int MAXIMO_APUESTAS = 20;//AMIBTO GLOBAL
 
 	public static Apuesta crearApuesta() {
 		Apuesta apuesta=null;
@@ -54,6 +57,43 @@ public class MainApuestas {
 		return opcionleida;
 	}
 
+	
+	/**
+	 * Método descubre sí el nombre de apostante ya existe
+	 * @param arayApuestas el registro de apuestas donde buscar
+	 * @param nombre el nombre del apostador
+	 * @param numApuestas la cima/ el número de apuestas del Array
+	 * @return false si el nombre no está en el array o tur si sí
+	 */
+	public static boolean esApuestaRepetida (Apuesta[] arrayApuestas, String nombre, int numApuestas)
+	{
+		boolean nombreRepetido = false;
+		int apuestaActual = 0;
+		Apuesta apuestaAux = null;
+		String nombreActual = null;
+		
+		
+			while ((apuestaActual<numApuestas)&&(!nombreRepetido))
+			{
+				//obtengo la apuesta
+				apuestaAux = arrayApuestas[apuestaActual];
+				//comparo el nombre
+				nombreActual = apuestaAux.getNombre();
+				if (nombreActual.equals(nombre))
+				{
+					nombreRepetido=true;
+				}
+				apuestaActual++;
+				
+			}
+		
+		return nombreRepetido;
+	}
+		
+	
+	
+	
+	
 	public static void main(String[] args) {
 		
 		Apuesta[] arrayApuestas = new Apuesta[MAXIMO_APUESTAS];
@@ -84,31 +124,30 @@ public class MainApuestas {
 				System.out.println("mostrar apuestas");
 				break;
 
-			case 2:
-				System.out.println("registrar apuestas");
+			case 2://REGISTRAR APUESTA
+				
 				if (numApuestas<MAXIMO_APUESTAS)
 				{
 					Apuesta apuestaNueva = crearApuesta();
 					System.out.println("Apuesta creada "  );
-					apuestaNueva.mostrarApuesta();
-					//TODO GUARDAR LA APUESTA EN UN ARRAY 
-					arrayApuestas[numApuestas]=apuestaNueva;
-					numApuestas++;
+					 
+					boolean apuestaRepe = esApuestaRepetida (arrayApuestas, apuestaNueva.getNombre(), numApuestas);
+					if (apuestaRepe)
+					{
+						System.out.println(apuestaNueva.getNombre()+ " Ya ha apostado" );
+					} else  {
+						//guardo
+						apuestaNueva.mostrarApuesta();
+						arrayApuestas[numApuestas]=apuestaNueva;
+						numApuestas++;
+					}
+					
 				} else {
 					System.out.println("APUESTAS CERRADAS");
 				}
 				
 				
-				
-				
-
-				
-						
-				//TODO pedir al usuario los datos de la apuesta
-				//pedir nombre
-				//pedir goles local
-				//pedir goles vistante
-				
+								
 				break;
 
 			case 3:
