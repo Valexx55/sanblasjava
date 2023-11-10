@@ -39,7 +39,8 @@ public class MainApuestas {
 		System.out.println("\nOpciones:");
 		System.out.println("1. Mostrar Apuestas");
 		System.out.println("2. Registrar Nueva Apuesta");
-		System.out.println("3. Salir");
+		System.out.println("3. Borrar apuestas (todas)");
+		System.out.println("4. Salir");
 
 		System.out.print("Selecciona una opción: ");
 
@@ -98,7 +99,7 @@ public class MainApuestas {
 		
 		Apuesta[] arrayApuestas = new Apuesta[MAXIMO_APUESTAS];
 		int numApuestas = 0;//lo uso para llevar la cuenta de apuestas
-
+		//TODO AÑADIR LA OPCIÓN DE BORRAR APUESTAS (TODAS)
 		int opcionleida = 0;
 		do {
 			mostrarMenu();
@@ -149,8 +150,17 @@ public class MainApuestas {
 				
 								
 				break;
-
+				
 			case 3:
+				for (int i = 0; i < numApuestas; i++) {
+					arrayApuestas[i]=null;
+			
+				}
+				numApuestas=0;//actualizo el numero de apuestas el cero!
+				System.out.println("Apuestas BORRADAS");
+			break;
+
+			case 4:
 				System.out.println("salir");
 				break;
 
