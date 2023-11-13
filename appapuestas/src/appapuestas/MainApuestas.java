@@ -25,10 +25,14 @@ public class MainApuestas {
 
 		System.out.println("Número de goles " + Apuesta.equipoVisitante);
 		int golesvisitante = scanner.nextInt();
-
+		
+		System.out.println("Valor de la apuesta");
+		float valorapuesta = scanner.nextFloat();
+		
 		apuesta.setNombre(nombreapostante);
 		apuesta.setGolesLocal(goleslocal);
 		apuesta.setGolesVisitante(golesvisitante);
+		apuesta.setValorApuesta(valorapuesta);
 
 		return apuesta;
 	}

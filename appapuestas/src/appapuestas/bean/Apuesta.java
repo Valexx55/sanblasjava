@@ -5,7 +5,7 @@ public class Apuesta {
 	//ATRIBUTOS A NIVEL DE CLASE
 	public static String equipoLocal;
 	public static String equipoVisitante;
-	public static float valorApuesta;
+	
 	
 	
 	//ATRIBUTOS A NIVEL DE OBJETO
@@ -13,7 +13,7 @@ public class Apuesta {
 	//Resultado
 	private int golesLocal;
 	private int golesVisitante;
-	
+	private float valorApuesta;
 	
 	//SECCIÓN QUE SIRVE PARA INICIALIZAR
 	//ATRIBUTOS DE LA CLASE
@@ -25,7 +25,6 @@ public class Apuesta {
 		
 		Apuesta.equipoLocal = "RAYO VALLECANO";
 		Apuesta.equipoVisitante = "GIRONA";
-		Apuesta.valorApuesta = 2;
 		
 		System.out.println("En la sección static de Apuesta");
 		
@@ -49,13 +48,7 @@ public class Apuesta {
 		Apuesta.equipoVisitante = equipoVisitante;
 	}
 	
-	public static float getValorApuesta() {
-		return valorApuesta;
-	}
 	
-	public static void setValorApuesta(float valorApuesta) {
-		Apuesta.valorApuesta = valorApuesta;
-	}
 	
 	public String getNombre() {
 		return nombre;
@@ -81,6 +74,14 @@ public class Apuesta {
 		this.golesVisitante = golesVisitante;
 	}
 
+	public float getValorApuesta() {
+		return valorApuesta;
+	}
+
+	public void setValorApuesta(float valorApuesta) {
+		this.valorApuesta = valorApuesta;
+	}
+
 	public Apuesta(String nombre, int golesLocal, int golesVisitante) {
 		super();
 		this.nombre = nombre;
@@ -91,16 +92,24 @@ public class Apuesta {
 	public Apuesta() {
 		// TODO Auto-generated constructor stub
 	}
+    
+	public Apuesta(String nombre, int golesLocal, int golesVisitante, float valorApuesta) {
+		super();
+		this.nombre = nombre;
+		this.golesLocal = golesLocal;
+		this.golesVisitante = golesVisitante;
+		this.valorApuesta = valorApuesta;
+	}
 
 	@Override
 	public String toString() {
-		return "Apuesta [nombre=" + this.nombre + ", golesLocal=" + this.golesLocal + ", golesVisitante=" + this.golesVisitante + "]";
+		return "Apuesta [nombre=" + this.nombre + ", golesLocal=" + this.golesLocal + ", golesVisitante=" + this.golesVisitante + ", valorApuesta = " + this.valorApuesta + " ]";
 	}
 	
 	public void mostrarApuesta ()
 	{
 		//Alison 1-0
-		System.out.println(this.nombre + " " + this.golesLocal+"-"+this.golesVisitante);
+		System.out.println(this.nombre + " " + this.golesLocal+"-"+this.golesVisitante +" " +this.valorApuesta);
 	}
 	
 	
