@@ -44,7 +44,8 @@ public class MainApuestas {
 		System.out.println("2. Registrar Nueva Apuesta");
 		System.out.println("3. Borrar apuestas (todas)");
 		System.out.println("4. Buscar apostante");
-		System.out.println("5. Salir");
+		System.out.println("5. Mostrar estadísticas");
+		System.out.println("6. Salir");
 
 		System.out.print("Selecciona una opción: ");
 
@@ -120,6 +121,66 @@ public class MainApuestas {
 		}
 
 		return apuesta;
+	}
+	
+	
+	//HACER ESTADISTICA DE LA MEDIA
+
+	public static float estadisticaMediaApuesta(Apuesta[] arrayApuestas, int numApuestas) {
+
+		float promedio = 0;
+		float suma = 0;
+
+		if (numApuestas > 0) {
+
+			for (int i = 0; i < numApuestas; i++) {
+				suma = suma + arrayApuestas[i].getValorApuesta();
+				
+			}
+			promedio = suma / numApuestas;
+		}
+		
+		return promedio;
+	}
+
+	// HACER ESTADISTICA DEL MAYOR DE APUESTAS
+
+	public static float estadisticaMayorApuesta(Apuesta[] arrayApuestas, int numApuestas) {
+
+		float mayorApuesta = 0;
+
+		if (numApuestas > 0) {
+
+			for (int i = 0; i < numApuestas; i++) {
+				if (arrayApuestas[i].getValorApuesta() > mayorApuesta ) {
+					mayorApuesta = arrayApuestas[i].getValorApuesta();
+				}
+			}
+		}
+		return mayorApuesta;
+	}
+	
+	public static float estadisticaMenorApuesta(Apuesta[] arrayApuestas, int numApuestas) {
+		float menor = Float.MAX_VALUE;//pongo el níumero más grande, para que entre en el menor
+		
+		//menor  = (numApuestas > 0) ? Float.MAX_VALUE : 0;
+		
+		if (numApuestas > 0) {
+		
+			for (int i = 0; i < numApuestas; i++) {
+				if (arrayApuestas[i].getValorApuesta() < menor) {
+					menor = arrayApuestas[i].getValorApuesta();
+				}
+			}
+			
+		} else {
+			//si no tengo apuestas, la menor es cero
+			menor = 0;
+		}
+
+		
+
+		return menor;
 	}
 
 	public static void main(String[] args) {
@@ -199,6 +260,29 @@ public class MainApuestas {
 				break;
 
 			case 5:
+				System.out.println("generar estadísticas");
+				//salir = true;
+				
+				//TODO calcular media
+				float media = estadisticaMediaApuesta(arrayApuestas, numApuestas);
+				System.out.println("La media de apuestas es " + media);
+				//TODO calcular maximo
+				float mayor = estadisticaMayorApuesta(arrayApuestas, numApuestas);
+				System.out.println("La mayor de las apuestas es " + mayor);
+				//TODO calcular mínimo
+				float menor = estadisticaMenorApuesta(arrayApuestas, numApuestas);
+				System.out.println("La menor de las apuestas es " + menor);
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				break;	
+			case 6:
 				System.out.println("salir");
 				salir = true;
 				break;
