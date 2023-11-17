@@ -58,6 +58,12 @@ this.- Palabra reservada del lenguaje, que tiene
  SOBRECARGA / OVERLOAD: Ocurre cuando tengo un mismo método (mismo nombre)
  con distintos parámetros.
  
+ SOBREESCRITURA / OVERRIDE: Cuando en una clase
+ hija redefino un método de la clase padre
+ Los métodos sobreescritos normalmente llevan
+ la anotación @Override encima de su cabecera
+ pero no es obligatorio
+ 
  
  ATRIBUTOS Y STATIC: Se dice que un atributo es estático si está
  definido a nivel de Clase (no de objeto) Es decir, está compartido
