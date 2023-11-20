@@ -28,7 +28,7 @@ public class MainFuncionesDefeng {
 
 		// VARIABLES PARA TESTS
 		String cadena = "Ejemplo cadena aaa";
-		int numero = 9;
+		int numero = 10;
 		char caracter = 'a';
 
 		// TESTS
@@ -41,6 +41,8 @@ public class MainFuncionesDefeng {
 		System.out.println(esMayor(numero));
 
 		System.out.println(notaNominal(numero));
+		
+		System.out.println(notaNominalEnum(numero));
 
 		System.out.println(cadenaInversa(cadena));
 
@@ -152,6 +154,25 @@ public class MainFuncionesDefeng {
 			notaNominal = "Sobresaliente";
 		}
 		return notaNominal;
+	}
+	
+	public static TipoNota notaNominalEnum(double nota) {
+		TipoNota tipoNota = null;
+
+		if (nota < 5) {
+			tipoNota = TipoNota.SUSPENSO;
+		} else if (nota == 5) {
+			tipoNota = TipoNota.APROBADO;
+		} else if (nota >= 6 && nota < 7) {
+			tipoNota = TipoNota.BIEN;
+		} else if (nota >= 7 && nota < 9) {
+			tipoNota = TipoNota.NOTABLE;
+		} else if (nota >= 9 && nota <10) {
+			tipoNota = TipoNota.SOBRESALIENTE;
+		} else {
+			tipoNota = TipoNota.MATRICULA;
+		}
+		return tipoNota;
 	}
 
 	/**
