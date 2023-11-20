@@ -18,6 +18,8 @@ public class MiPrimeraClase {
 		
 		String saludoItaliano = "CIAO";
 		int longitud = saludoItaliano.length();
+		int c = (int) saludoItaliano.charAt(0);
+		System.out.println(c);
 		
 		String saludoEspanol = "HOLA";
 		
