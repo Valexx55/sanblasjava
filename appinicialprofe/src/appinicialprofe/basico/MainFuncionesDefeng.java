@@ -161,7 +161,7 @@ public class MainFuncionesDefeng {
 
 		if (nota < 5) {
 			tipoNota = TipoNota.SUSPENSO;
-		} else if (nota == 5) {
+		} else if (nota >= 5 && nota <6) {
 			tipoNota = TipoNota.APROBADO;
 		} else if (nota >= 6 && nota < 7) {
 			tipoNota = TipoNota.BIEN;
