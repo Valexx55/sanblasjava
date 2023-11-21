@@ -42,5 +42,49 @@ public class Estudiante extends Persona {
 			
 	
 	}
+	
+	
+	@Override
+	public boolean equals(Object obj) {
+		boolean iguales = false;
+		
+		if (obj!=null)
+		{
+			if (obj instanceof Estudiante)//(obj instanceof Estudiante e)//https://docs.oracle.com/en/java/javase/20/language/pattern-matching-switch-expressions-and-statements.html#GUID-E69EEA63-E204-41B4-AA7F-D58B26A3B232
+			{
+				
+				Estudiante e = (Estudiante)obj;//hacemos el casting
+				//2 estudiantes son iguales si
+				//tienes mismo nombre, mismo email y mismo teléfono
+				if (this.getNombre().equals(e.getNombre()) &&
+					this.getEmail().equals(e.getEmail())	&&
+					this.getTelefono()==e.getTelefono() &&
+					this.getNumero()==e.getNumero() &&
+					this.getPromedio()==e.getPromedio() 
+					)
+				{
+					iguales = true;
+				}
+			
+			}
+			
+		}
+		
+		return iguales;
+	}
+
+	@Override
+	public String toString() {
+		return "Estudiante [numero=" +this.numero + ", promedio=" + this.promedio + ", getNombre()=" + this.getNombre()
+				+ ", getTelefono()=" + this.getTelefono() + ", getEmail()=" + this.getEmail() + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 }

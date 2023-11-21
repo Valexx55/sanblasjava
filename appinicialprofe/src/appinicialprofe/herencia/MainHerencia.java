@@ -11,6 +11,7 @@ public class MainHerencia {
 		
 		listaPersonas = new ArrayList<Persona>();
 		
+		List<Estudiante> le = new ArrayList<Estudiante>();
 		
 		
 		Persona persona = new Persona();
@@ -23,14 +24,37 @@ public class MainHerencia {
 		
         Object opersona = 	(Object) persona;
 		
-		Estudiante estudiante2 = (Estudiante)persona2;
+		Estudiante estudiante2 = new Estudiante();
 		
-		estudiante.setNombre("Defeng");
-		estudiante.setEmail("defeng@kuku.ch");
-		estudiante.setTelefono(9874521);
-		estudiante.setNumero(1);
-		estudiante.setPromedio(5);
+		estudiante2.setNombre("Alex");
+		estudiante2.setEmail("alex@gmail.es");
+		estudiante2.setTelefono(874521);
+		estudiante2.setNumero(2);
+		estudiante2.setPromedio(4);
 		
+		Estudiante estudiante3 = new Estudiante();
+		
+		estudiante3.setNombre("Lidia");
+		estudiante3.setEmail("lidia@kuku.ch");
+		estudiante3.setTelefono(98721);
+		estudiante3.setNumero(3);
+		estudiante3.setPromedio(7);
+		
+		Estudiante estudiante4 = new Estudiante();
+		
+		estudiante4.setNombre("Defeng");
+		estudiante4.setEmail("defeng@kuku.ch");
+		estudiante4.setTelefono(9874521);
+		estudiante4.setNumero(1);
+		estudiante4.setPromedio(5);
+		
+		
+		le.add(estudiante2);
+		le.add(estudiante3);
+		//le.add(estudiante4);
+		
+		int posicion = posicionEstudiante(estudiante4, le);
+		System.out.println("En la posición " + posicion);
 		
 		persona.setNombre("Laura");
 		persona.setEmail("lau@correo.es");
@@ -80,5 +104,52 @@ public class MainHerencia {
 			System.out.println("NO, la persona  No es Estudiante");
 		}
 	}
+	
+	/**
+	 * 1) UN MÉTDO QUE RECIBA UN ALUMNO Y 
+	 * UNA LISTA DE ALUMNOS Y DIGA EN QUE 
+	 * POSICIÓN ESTÁ ESE ALUMNO
+		O -1 SI ESE ALUMNO NO EXISTE EN AL LISTA
+	 */
+	
+	public static int posicionEstudiante (
+			Estudiante estudianteBuscado, 
+			List<Estudiante> listaEstudiantes)
+	{
+		int posicion = -1;
+		int posicionActual = 0;
+		int longitud = listaEstudiantes.size();
+		boolean encontrado = false;
+		Estudiante estudianteAux = null;
+		//hago esto hasta llegar al final o encontrar al alumno
+		//recorro la lista lista y voy buscando
+			//si el estudiante actual es igula al buscado, me guardo la posición
+			//si no voy a la siguiente
+		while ((posicionActual<longitud)&& (!encontrado))
+		{
+			estudianteAux = listaEstudiantes.get(posicionActual);
+			//si el estudianteAux es igual a estudianteBuscado
+			//encontrado = true y actualizo posicion
+			System.out.println("Estudiante actual " + estudianteAux.toString());
+			if (estudianteAux.equals(estudianteBuscado))
+			{
+				encontrado = true;
+				posicion = posicionActual;
+			} 
+			
+			//si no, voy al siguiente
+			else {
+				posicionActual++;
+			}
+		}
+		
+		return posicion;
+	}
+	
+	
+	
+	 
+	
+	
 
 }

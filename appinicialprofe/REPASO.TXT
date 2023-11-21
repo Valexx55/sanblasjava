@@ -72,6 +72,8 @@ this.- Palabra reservada del lenguaje, que tiene
  Los otros atributos "dinámicos" son lo que son distintos para cada
  objeto. Cada objeto tiene los suyos propios.
  
+ ESTADO DE UN OBJETO O ESTADO: El valor de los atributos
+ de un objeto en un momento dado
  
  
       
