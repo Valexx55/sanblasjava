@@ -50,5 +50,12 @@ public class Usuario {
 	public Usuario() {
 		super();
 	}
+
+	@Override
+	public String toString() {
+		return "Usuario [id=" + id + ", nombre=" + nombre + ", email=" + email + ", password=" + password + "]";
+	}
+	
+	
 	
 }
