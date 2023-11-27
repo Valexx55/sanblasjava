@@ -22,6 +22,7 @@ public class UsuarioDao {
 	public static final String INSTRUCCION_LEER_USUARIOS_FILTRO = "SELECT * FROM bdapuestas.usuarios WHERE email=? AND password=?";
 	public static final String INSTRUCCION_INSERTAR_USUARIO = "INSERT INTO `bdapuestas`.`usuarios` (`nombre`, `email`, `password`) VALUES (?,?,?);";
 	public static final String INSTRUCCION_BORRAR_USUARIO = "DELETE FROM bdapuestas.usuarios WHERE email = ?;";
+	public static final String INSTRUCCION_MODIFICAR_PASSWORD_USUARIO = "UPDATE bdapuestas.usuarios SET password=? WHERE email=?;";
 
 	/**
 	 * Méotod que reeucpera de la base de datos el listado de usuarios registrados
@@ -148,8 +149,21 @@ public class UsuarioDao {
 	}
 	// TODO modificar contraseña usuario - UPDATE - ELHIEZER
 
-	public boolean modificarUsuario(String email, String nuevapwd) {
+	public boolean modificarPasswordUsuario(String email, String nuevapwd) {
 		boolean modificado = false;
+		
+		try (Connection conexion = BaseDatos.obtenerConexion();) {
+
+			PreparedStatement modificarPassword = conexion.prepareStatement(INSTRUCCION_MODIFICAR_PASSWORD_USUARIO);
+			modificarPassword.setString(1, nuevapwd);
+			modificarPassword.setString(2, email);
+			int nfilasModificadas = modificarPassword.executeUpdate();
+			modificado = (nfilasModificadas == 1);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+
+		}
 
 		return modificado;
 	}
@@ -157,12 +171,20 @@ public class UsuarioDao {
 	
 	public static void main(String[] args) {
 		UsuarioDao usuarioDao = new UsuarioDao();
-		boolean borrado = usuarioDao.borrarUsuario("valex@gmail.com");
+		/*boolean borrado = usuarioDao.borrarUsuario("valex@gmail.com");
 		if (borrado)
 		{
 			System.out.println("se borró el usuario con email valex@gmail.com");
 		} else {
 			System.out.println("NO se borró el usuario con email valex@gmail.com");
+		}*/
+		
+		boolean modificado = usuarioDao.modificarPasswordUsuario("esquesolotengo2@hotmail.es", "laAlarmafallo");
+		if (modificado)
+		{
+			System.out.println("password Laura actualizada");
+		} else {
+			System.out.println("password Laura NO actualizada");
 		}
 	}
 
