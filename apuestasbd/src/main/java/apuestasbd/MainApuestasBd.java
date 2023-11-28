@@ -1,7 +1,5 @@
 package apuestasbd;
 
-import java.util.Scanner;
-
 import apuestasbd.dao.UsuarioDao;
 import apuestasbd.modelo.Usuario;
 
@@ -39,12 +37,7 @@ public class MainApuestasBd {
 	
 	 public static void registroUsuario ()
 	 {
-		 //TODO 
-		 /**
-		  * 1 PEDIR DATOS DE USUARIO (nombre, email, password) POR PANTALLA
-		  * 2 INSERTAR USUARIO (datos) en base datos
-		  * 3 INFORMAR Registro OK
-		  */
+		 
 		 Usuario usuarioNuevo = Pantalla.pedirUsuarioNuevo();
 		 
 		 UsuarioDao usuarioDao = new UsuarioDao();
@@ -62,11 +55,21 @@ public class MainApuestasBd {
 		 
 	 }
 	 
-	 public static void login ()
-	 {
-		 //TODO pedir las credenciales para que el usuario
-		 //entre en el sistema
-		 System.out.println("En login() ...");
-	 }
+	 public static void login()
+		{
+			Usuario usuarioLogin= Pantalla.pedirCredenciales(); //DESDE LA CLASE PANTALLA LLAMA A PEDIR CREDENCIALES
+			UsuarioDao usuarioDAO = new UsuarioDao();
+			Usuario usuariodeBD= usuarioDAO.buscarExiste(usuarioLogin.getEmail(), usuarioLogin.getPassword());
+			if (usuariodeBD!=null) {
+				System.out.println("BIENVENIDO");
+				Pantalla.menuPantallaPrincipal();
+			}else {
+				System.out.println(" USUARIO NO EXISTE VERIFICA DATOS");
+			}
+			//TODO CONTROLAR QUE CUANDO FALLA LA AUTENTICACIÓN
+			//NO SALGA DEL LOGIN. Y SI FALLA 3 VECES, ECHARLE
+			//DEL PROGRAMA
+			
+		}
 
 }
