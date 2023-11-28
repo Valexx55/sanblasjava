@@ -1,5 +1,10 @@
 package apuestasbd;
 
+import java.util.Scanner;
+
+import apuestasbd.dao.UsuarioDao;
+import apuestasbd.modelo.Usuario;
+
 public class MainApuestasBd {
 
 	public static void main(String[] args) {
@@ -16,6 +21,7 @@ public class MainApuestasBd {
 			switch (opcionInicio) { 
 			case 1: //ACCESO 
 				System.out.println("Quiere Acceder");
+				login();
 				break;
 			case 2: //REGISTRO
 				System.out.println("Quiere Registrarse");
@@ -39,7 +45,28 @@ public class MainApuestasBd {
 		  * 2 INSERTAR USUARIO (datos) en base datos
 		  * 3 INFORMAR Registro OK
 		  */
+		 Usuario usuarioNuevo = Pantalla.pedirUsuarioNuevo();
 		 
+		 UsuarioDao usuarioDao = new UsuarioDao();
+		 boolean insertado = usuarioDao.insertarUsuario(usuarioNuevo);
+		 
+		 if (insertado)
+		 {
+			 System.out.println("SE HA REGISTRADO CON ÉXITO");
+			 login ();
+		 } else {
+			 System.out.println("REGISTRO FALLIDO. VUELVA A INTENTARLO");
+			 //NO HAGO NADA, MUESTRA EL MENÚ PRINCIPAL OTRA VEZ
+		 }
+		 
+		 
+	 }
+	 
+	 public static void login ()
+	 {
+		 //TODO pedir las credenciales para que el usuario
+		 //entre en el sistema
+		 System.out.println("En login() ...");
 	 }
 
 }

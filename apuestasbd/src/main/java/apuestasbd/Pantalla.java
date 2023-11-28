@@ -23,6 +23,23 @@ public class Pantalla {
 
 	static Scanner sc = new Scanner(System.in);
 
+	public static Usuario pedirUsuarioNuevo ()
+	{
+		Usuario usuario = null;
+		
+		Scanner scanner = new Scanner(System.in);
+		 String nombre, email, password = null;
+		 System.out.println("Introduzca nombre de usuario");
+		 nombre = scanner.next();
+		 System.out.println("Introduzca email");
+		 email = scanner.next();
+		 System.out.println("Introduzca contraseña");
+		 password = scanner.next();
+		 
+		 usuario = new Usuario(0, nombre, email, password);
+		 
+		 return usuario;
+	}
 	
 	public static Usuario pedirCredenciales ()
 	{

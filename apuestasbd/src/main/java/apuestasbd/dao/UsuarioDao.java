@@ -102,7 +102,13 @@ public class UsuarioDao {
 		return usuario;
 
 	}
-
+	
+	
+/**
+ * Método que inserta un usuario en la base de datos
+ * @param usuario el dato que queremos guardar en base de datos
+ * @return true si el usuario se insertó con éxito o false en caso contrario
+ */
 	public boolean insertarUsuario(Usuario usuario) {
 		boolean insertado = false;
 

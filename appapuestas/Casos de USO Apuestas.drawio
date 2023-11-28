@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-11-24T12:50:58.497Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="l7lPjO9flcJjRq1BFiKy" version="22.1.2" type="device">
+<mxfile host="Electron" modified="2023-11-27T12:48:56.918Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="4ctrZJUROxid_Pk8ioVY" version="22.1.2" type="device">
   <diagram name="Página-1" id="6ri0GXHKn8S3LQYCnVM0">
-    <mxGraphModel dx="934" dy="654" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1246" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -24,7 +24,7 @@
         <mxCell id="5jzpaCUNolcwSDhed0aJ-1" value="SACAR EL FAVORITO DE UN PARTIDO" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="650" y="80" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="5jzpaCUNolcwSDhed0aJ-2" value="ALTA&amp;nbsp;&lt;br&gt;USUARIO" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="5jzpaCUNolcwSDhed0aJ-2" value="ALTA&amp;nbsp;&lt;br&gt;USUARIO" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FF66FF;" parent="1" vertex="1">
           <mxGeometry x="610" y="280" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="5jzpaCUNolcwSDhed0aJ-3" value="LOGIN" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FF99FF;" parent="1" vertex="1">
@@ -45,7 +45,7 @@
             <mxPoint x="640" y="330" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5jzpaCUNolcwSDhed0aJ-9" value="BAJA&lt;br&gt;USUARIO" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="5jzpaCUNolcwSDhed0aJ-9" value="BAJA&lt;br&gt;USUARIO" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FF66FF;" parent="1" vertex="1">
           <mxGeometry x="620" y="380" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="5jzpaCUNolcwSDhed0aJ-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.008;entryY=0.375;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=8 8;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="5jzpaCUNolcwSDhed0aJ-3" target="5jzpaCUNolcwSDhed0aJ-9" edge="1">
@@ -54,7 +54,7 @@
             <mxPoint x="629" y="355" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="5jzpaCUNolcwSDhed0aJ-12" value="MODIFICAR&lt;br&gt;CONTRASEÑA" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="5jzpaCUNolcwSDhed0aJ-12" value="MODIFICAR&lt;br&gt;CONTRASEÑA" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FF66FF;" parent="1" vertex="1">
           <mxGeometry x="510" y="460" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="5jzpaCUNolcwSDhed0aJ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.042;entryY=0.413;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=8 8;exitX=0.35;exitY=0.975;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="5jzpaCUNolcwSDhed0aJ-3" target="5jzpaCUNolcwSDhed0aJ-12" edge="1">
@@ -76,16 +76,16 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5jzpaCUNolcwSDhed0aJ-17" value="A/B/M/C&lt;br&gt;EQUIPOS" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="310" y="560" width="120" height="80" as="geometry" />
+          <mxGeometry x="1121" y="120" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="5jzpaCUNolcwSDhed0aJ-18" value="A/B/M/C&lt;br&gt;PARTIDOS" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="310" y="710" width="120" height="80" as="geometry" />
+          <mxGeometry x="1121" y="270" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="5jzpaCUNolcwSDhed0aJ-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="5jzpaCUNolcwSDhed0aJ-19" target="5jzpaCUNolcwSDhed0aJ-17" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="5jzpaCUNolcwSDhed0aJ-19" value="ADMIN" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
-          <mxGeometry x="80" y="600" width="50" height="90" as="geometry" />
+          <mxGeometry x="891" y="160" width="50" height="90" as="geometry" />
         </mxCell>
         <mxCell id="5jzpaCUNolcwSDhed0aJ-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="5jzpaCUNolcwSDhed0aJ-19" target="5jzpaCUNolcwSDhed0aJ-18" edge="1">
           <mxGeometry relative="1" as="geometry" />
