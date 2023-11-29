@@ -117,7 +117,7 @@ public class UsuarioDao {
 		// declaras la conexión dentro y se cuerra sola
 
 		try (Connection conexion = BaseDatos.obtenerConexion()) {
-
+			conexion.setAutoCommit(false);
 			System.out.println("Conexión realizada");
 			PreparedStatement instruccion = conexion.prepareStatement(INSTRUCCION_INSERTAR_USUARIO);
 			instruccion.setString(1, usuario.getNombre());
@@ -125,9 +125,11 @@ public class UsuarioDao {
 			instruccion.setString(3, usuario.getPassword());
 			int nfilasnuevas = instruccion.executeUpdate();
 			insertado = (nfilasnuevas == 1);
+			conexion.commit();
 
 		} catch (SQLException e) {
 			e.printStackTrace();
+			//conexion.rollback();
 			// throw e;//propago la excepción
 
 		}

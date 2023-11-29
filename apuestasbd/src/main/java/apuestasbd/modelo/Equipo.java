@@ -33,7 +33,7 @@ public class Equipo implements Comparable<Equipo>{
 	}
 	@Override
 	public String toString() {
-		return "Equipo [idequipo=" + idequipo + ", nombre=" + nombre + "]";
+		return "Equipo [idequipo=" + idequipo + ", nombre=" + nombre + "]\n";
 	}
 
 	public static void main(String[] args) {
@@ -49,25 +49,34 @@ public class Equipo implements Comparable<Equipo>{
 		listaEquipos.add(equipo2);
 		
 		System.out.println("lista equipos tras crear");
-		System.out.println(listaEquipos);
+		System.out.println(listaEquipos + "\n");//\n es el caracter intro 10 o el 10 y 13
 		
 		Collections.shuffle(listaEquipos);
 		System.out.println("lista equipos tras barajar");
-		System.out.println(listaEquipos);
+		System.out.println(listaEquipos+ "\n");
 		
 		//Collection
 		ComparadorEquiposPorId ce = new ComparadorEquiposPorId();
-		Collections.sort(listaEquipos, ce);
-		System.out.println("lista equipos tras ordenar");
-		System.out.println(listaEquipos);
-		//Collections.sort(null);
+		Collections.sort(listaEquipos, ce);//ORDEN TOTAL -- sort invoca al Comparator.compare (o1,o2)
+		System.out.println("lista equipos tras ordenar por id -TOTAL-");
+		System.out.println(listaEquipos+ "\n");
+		Collections.sort(listaEquipos);//ORDEN NATURAL -- sort Equipo.compareTo(equipo);
+		System.out.println("lista equipos tras ordenar por Nombre -NATURAL-");
+		System.out.println(listaEquipos+ "\n");
 		
 	}
 	
 	//ORDEN NATURAL: el método de comparación se hace dentro de la clase
 	@Override
 	public int compareTo(Equipo o) {
-		// TODO tengo que comparar o con this
-		return 0;
+		int resultado = 0;
+		//si this es mayor, devuelvo positivo
+		//si o es mayor, devuelvo negativo
+		//si son iguales, cero
+		//VOY A COMPARAR POR EL NOMBRE DE LOS EQUIPOS
+		resultado = this.nombre.compareTo(o.nombre);
+		
+		
+		return resultado;
 	}
 }
