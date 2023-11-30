@@ -7,16 +7,24 @@ import java.util.List;
 
 public class MainFicheros {
 	
+	//VAMOS A TRABAJAR CON Files
 	public static void main(String[] args) {
 		
+		//vamos al leer el fichero de equipos
+		
 		try {
-			List<String> listaEquipos = Files.readAllLines(Path.of("equipos.txt"));
-			listaEquipos.forEach(System.out::println); 
+			
+			//Path es como File pero "moderno"
+			Path pathEquipos = Path.of("equipos.txt");
+			List<String> lequipos = Files.readAllLines(pathEquipos);
+			System.out.println(lequipos);
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
 		
 	}
 

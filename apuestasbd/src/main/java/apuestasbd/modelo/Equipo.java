@@ -79,4 +79,10 @@ public class Equipo implements Comparable<Equipo>{
 		
 		return resultado;
 	}
+	
+	//TODO HACED UN MÉTODO QUE CARGUE LA LISTA
+	//DE EQUIPOS DEL FICHERO "equipos.txt"
+	//Y LA CREE ORDENADA ALFABÉTICAMENTE (A-Z
+	
+	
 }
