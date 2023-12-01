@@ -87,5 +87,28 @@ public class MainApuestasBd {
 		//SI FALLA SERÁ EXPULSADO
 
 	}
+	
+	
+	/**
+	 * Este método responde a una opción del usuario
+	 * cuando quiere generar partidos y equipos nuevos
+	 * 
+	 * Si hay partidos
+	 */
+	public static void generarPartidos ()
+	{
+		//1 CARGAR EQUIPOS : OBTENEMOS LA LISTA DE EQUIPOS
+		//2 GENERAR PARTIDOS DE ESOS EQIUPOS
+		//3 PERSISITR (GUARDAR EN BD)LOS EQUIPOS 
+		//Y LOS PARTIDOS
+		//nota: si ya hubiera equipos y partidos en la base de datos
+		//hay que eliminarlos antes
+		
+	}
+	
+	
+	
+	
+	
 
 }

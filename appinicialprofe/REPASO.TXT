@@ -75,5 +75,8 @@ this.- Palabra reservada del lenguaje, que tiene
  ESTADO DE UN OBJETO O ESTADO: El valor de los atributos
  de un objeto en un momento dado
  
- 
+ CALLBACK: "Lamada por detrás". Ocurre cuando 
+ a un función mía, le llama otro programa (Java)
+ Por ejemplo, cuando Collections.sort() invoca
+ a compareTo
       
