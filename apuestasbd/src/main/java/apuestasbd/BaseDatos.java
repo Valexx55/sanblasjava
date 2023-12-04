@@ -1,16 +1,20 @@
 package apuestasbd;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.mysql.cj.protocol.x.SyncFlushDeflaterOutputStream;
 
+import apuestasbd.modelo.Equipo;
+import apuestasbd.modelo.Partido;
 import apuestasbd.modelo.Usuario;
 
 public class BaseDatos {
@@ -39,9 +43,43 @@ public class BaseDatos {
 	
 	
 	
-	/*
+	
 	public static void main(String[] args) {
 		
+		//String sql = "INSERT INTO `bdapuestas`.`partidos` (`fecha`,`goles_visitantes`, `goles_local`, `equipo_local`, `equipo_visitante`) VALUES (?, ?, ?, ?, ?)";
+		String sql2 = "DELETE FROM bdapuestas.equipos";
+		
+		
+		/*Partido partido = new Partido();
+		Equipo e1 = new Equipo(1, "Real");
+		Equipo e2 = new Equipo(2, "Atleti");
+		
+		partido.setEquipoLocal(e1);
+		partido.setEquipoLocal(e2);
+		partido.setGolesLocal(0);
+		partido.setGolesVisitante(0);
+		partido.setFecha(LocalDate.now());*/
+		
+		
+		try (Connection c = obtenerConexion()){
+			/*PreparedStatement ps = c.prepareStatement(sql);
+			ps.setDate(1, Date.valueOf(partido.getFecha()));
+			ps.setInt(2, 0);
+			ps.setInt(3, 0);
+			ps.setInt(4, e1.getIdequipo());
+			ps.setInt(5, e2.getIdequipo());*/
+			
+			Statement st = c.createStatement();
+			int n =  st.executeUpdate(sql2);
+			
+			//int n = ps.executeUpdate();
+			
+			System.out.println("Se han modificado " + n + " filas");
+			
+		}catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
 		
 		/*Usuario usuario = buscarExiste("valerianomoreno@gmail.com", "nomeacuerdo");
 		
@@ -78,9 +116,9 @@ public class BaseDatos {
 		
 		List<Usuario> listabd =  leerUsuarios();
 		System.out.println("La lista tiene " + listabd.size() + " usuarios");
-		System.out.println(listabd);
+		System.out.println(listabd);*/
 		
-	}*/
+	}
 	
 	
 	

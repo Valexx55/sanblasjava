@@ -27,7 +27,7 @@ public class Pantalla {
 	{
 		Usuario usuario = null;
 		
-		Scanner scanner = new Scanner(System.in);
+		 Scanner scanner = new Scanner(System.in);
 		 String nombre, email, password = null;
 		 System.out.println("Introduzca nombre de usuario");
 		 nombre = scanner.next();
@@ -85,6 +85,24 @@ public class Pantalla {
 
 		return opcion;
 
+	}
+	
+	public static boolean confirmarGenerarPartidos() {
+		boolean confirmar=false;
+		int opc=0;
+		
+			System.out.println("Generar los partidos puede borrar la base de datos ¿Quiere borrar los datos almacenados?");
+			System.out.println("1-SI");	
+			System.out.println("2-NO");	
+			
+			Scanner sc= new Scanner(System.in);
+			opc=sc.nextInt();
+		
+			confirmar = (opc == 1);// ? true : false;
+			
+
+		return confirmar;
+		
 	}
 
 }

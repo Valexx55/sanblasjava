@@ -1,6 +1,10 @@
 package apuestasbd;
 
+import java.util.List;
+
 import apuestasbd.dao.UsuarioDao;
+import apuestasbd.modelo.Equipo;
+import apuestasbd.modelo.Partido;
 import apuestasbd.modelo.Usuario;
 
 public class MainApuestasBd {
@@ -8,12 +12,9 @@ public class MainApuestasBd {
 	
 	private static final int MAX_INTENTOS_LOGIN = 3;
 	
-	public static void main(String[] args) {
+	/*public static void main(String[] args) {
 
-		/**
-		 * System.out.println("(1) Acceso. "); System.out.println("(2) Registro");
-		 * System.out.println("(3) Salir. ");
-		 */
+	
 		boolean salir = false;
 		do {
 
@@ -35,7 +36,7 @@ public class MainApuestasBd {
 				System.out.println("OPCIÓN INCORRECTA");
 			}
 		} while (!salir);
-	}
+	}*/
 
 	public static void registroUsuario() {
 
@@ -97,15 +98,30 @@ public class MainApuestasBd {
 	 */
 	public static void generarPartidos ()
 	{
-		//1 CARGAR EQUIPOS : OBTENEMOS LA LISTA DE EQUIPOS
-		//2 GENERAR PARTIDOS DE ESOS EQIUPOS
-		//3 PERSISITR (GUARDAR EN BD)LOS EQUIPOS 
-		//Y LOS PARTIDOS
-		//nota: si ya hubiera equipos y partidos en la base de datos
-		//hay que eliminarlos antes
+		//0 PREGUNTAR AL USUARIO SI QUIERE BORRAR LOS DATOS / REGENERAR
+		if (Pantalla.confirmarGenerarPartidos())
+		{
+			//1 CARGAR EQUIPOS : OBTENEMOS LA LISTA DE EQUIPOS
+			List<Equipo> lEquipos = Equipo.cargarListaEquipos("src/main/resources/equipos.txt");
+			System.out.println("Equipos " + lEquipos);
+			//2 GENERAR PARTIDOS DE ESOS EQIUPOS
+			List<Partido> lPartidos = Partido.generarPartidos(lEquipos);
+			System.out.println("Partidos " + lPartidos);
+			
+			//3 PERSISITR (GUARDAR EN BD)LOS EQUIPOS 
+			//Y LOS PARTIDOS
+			//nota: si ya hubiera equipos y partidos en la base de datos
+			//hay que eliminarlos antes
+		} else {
+			System.out.println("Operación cancelada");
+		}
+		
 		
 	}
 	
+	public static void main(String[] args) {
+		MainApuestasBd.generarPartidos();
+	}
 	
 	
 	
