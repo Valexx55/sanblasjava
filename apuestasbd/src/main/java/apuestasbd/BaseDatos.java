@@ -1,5 +1,6 @@
 package apuestasbd;
 
+import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -10,8 +11,9 @@ import java.sql.Statement;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
-import com.mysql.cj.protocol.x.SyncFlushDeflaterOutputStream;
+
 
 import apuestasbd.modelo.Equipo;
 import apuestasbd.modelo.Partido;
@@ -21,11 +23,36 @@ public class BaseDatos {
 	
 	public static final String SERVIDOR_BD = "localhost";
 	public static final String PUERTO = "3306";
-	public static final String USUARIO = "root";
-	public static final String PWD = "root";
-	public static final String CADENA_DE_CONEXION = "jdbc:mysql://"+SERVIDOR_BD+":"+PUERTO+"/bdapuestas";
+	public static final String USUARIO;// = "root";
+	public static final String PWD;// = "root";
+	public static final String CADENA_DE_CONEXION;// = "jdbc:mysql://"+SERVIDOR_BD+":"+PUERTO+"/bdapuestas";
 	
-	
+	static {
+		//esta sección de código se ejecuta al principio
+		//cuando la clase BaseDatos se vaya a utilizar, por primera vez
+		//se ejecuta esto
+		String cadenaConexion = "jdbc:mysql://localhost:3306/bdapuestas";
+		String usuario = "root";
+		String password = "root";
+		System.out.println("Sección static de Base de datos");
+		try {
+			Properties properties = new Properties();
+			FileReader fileReader = new FileReader("src/main/resources/apuestas.properties");
+			properties.load(fileReader);//leemos el fichero
+			cadenaConexion = properties.getProperty("cadenaconexion");
+			usuario = properties.getProperty("usuariobd");
+			password = properties.getProperty("contraseniabd");
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.err.println("Error al cargar las propiedades");
+		} finally {
+			CADENA_DE_CONEXION = cadenaConexion;
+			USUARIO = usuario;
+			PWD = password;
+		}
+		
+	}
 	
 	
 	

@@ -1,0 +1,81 @@
+<mxfile host="Electron" modified="2023-12-05T11:43:24.060Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="kpGJM9qF2FYpxXY-9PHV" version="22.1.2" type="device">
+  <diagram name="Página-1" id="PvaBMU1V46CNtdSU4m6x">
+    <mxGraphModel dx="1379" dy="741" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-1" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b&gt;DIAGRAMA ACTIVIDAD GENERAR PARTIDOS&lt;/b&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="280" y="70" width="310" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="29gn8Rf6wDr4S2qoNFNp-3" target="29gn8Rf6wDr4S2qoNFNp-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-3" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="110" y="170" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-4" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1A1A1A;" vertex="1" parent="1">
+          <mxGeometry x="440" y="940" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="29gn8Rf6wDr4S2qoNFNp-5" target="29gn8Rf6wDr4S2qoNFNp-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-5" value="MOSTRAR&lt;br&gt;AVISO" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="205" y="165" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-11" value="SÍ" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="29gn8Rf6wDr4S2qoNFNp-7" target="29gn8Rf6wDr4S2qoNFNp-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-28" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="29gn8Rf6wDr4S2qoNFNp-7" target="29gn8Rf6wDr4S2qoNFNp-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-7" value="CONFIRMA" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="425" y="155" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="29gn8Rf6wDr4S2qoNFNp-10" target="29gn8Rf6wDr4S2qoNFNp-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-10" value="BORRAR&lt;br&gt;EQUIPOS" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="557.5" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-12" value="BORRAR&lt;br&gt;LOS&amp;nbsp;&lt;br&gt;PARTIDOS&amp;nbsp;&lt;br&gt;AUTOMÁTICAMENTE" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="250" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-13" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="29gn8Rf6wDr4S2qoNFNp-10" target="29gn8Rf6wDr4S2qoNFNp-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="542.5" y="245" as="sourcePoint" />
+            <mxPoint x="802.5" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="29gn8Rf6wDr4S2qoNFNp-14" target="29gn8Rf6wDr4S2qoNFNp-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-14" value="CARGAR&lt;br&gt;EQUIPOS&lt;br&gt;FICHERO" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="557.5" y="400" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-16" value="equipos.txt" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="770" y="377.5" width="60" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="29gn8Rf6wDr4S2qoNFNp-19" target="29gn8Rf6wDr4S2qoNFNp-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-19" value="GENERO&lt;br&gt;PARTIDOS" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="557.5" y="540" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="29gn8Rf6wDr4S2qoNFNp-21" target="29gn8Rf6wDr4S2qoNFNp-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-21" value="GUARDO&amp;nbsp;&lt;br&gt;EQUIPOS EN BD" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="557.5" y="680" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="29gn8Rf6wDr4S2qoNFNp-23" target="29gn8Rf6wDr4S2qoNFNp-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="617.5" y="965" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="29gn8Rf6wDr4S2qoNFNp-23" value="GUARDO&lt;br&gt;PARTIDOS&amp;nbsp;&lt;br&gt;EN BD" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="557.5" y="820" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
