@@ -1,4 +1,4 @@
-1 INTESECCIÓN
+1 INTERSECCIÓN
 
 TENEMOS DOS FICHEROS DE TEXTO (nombres1.txt)
 y (nombres2.txt)

@@ -1,0 +1,7 @@
+arroz
+cebolla
+leche
+lechuga
+patata
+pimienta
+zanahoria
