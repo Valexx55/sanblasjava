@@ -2,6 +2,8 @@ package apuestasbd;
 
 import java.util.List;
 
+import apuestasbd.dao.EquipoDao;
+import apuestasbd.dao.PartidoDao;
 import apuestasbd.dao.UsuarioDao;
 import apuestasbd.modelo.Equipo;
 import apuestasbd.modelo.Partido;
@@ -101,17 +103,26 @@ public class MainApuestasBd {
 		//0 PREGUNTAR AL USUARIO SI QUIERE BORRAR LOS DATOS / REGENERAR
 		if (Pantalla.confirmarGenerarPartidos())
 		{
-			//1 CARGAR EQUIPOS : OBTENEMOS LA LISTA DE EQUIPOS
+			//CARGO EQUIPOS
 			List<Equipo> lEquipos = Equipo.cargarListaEquipos("src/main/resources/equipos.txt");
 			System.out.println("Equipos " + lEquipos);
-			//2 GENERAR PARTIDOS DE ESOS EQIUPOS
+			//GUARDO
+			EquipoDao equipoDao = new EquipoDao();
+			equipoDao.insertarEquipos(lEquipos);
+			//LEO PARA RECUPERAR EL ID
+			lEquipos = equipoDao.leerEquipos();
+			
+			//GENERO PARTIDOS
 			List<Partido> lPartidos = Partido.generarPartidos(lEquipos);
 			System.out.println("Partidos " + lPartidos);
+			//GUARDAR PARTIDOS
+			PartidoDao partidoDao = new PartidoDao();
+			partidoDao.insertarPartidos(lPartidos);
 			
-			//3 PERSISITR (GUARDAR EN BD)LOS EQUIPOS 
-			//Y LOS PARTIDOS
-			//nota: si ya hubiera equipos y partidos en la base de datos
-			//hay que eliminarlos antes
+			
+		
+			
+			
 		} else {
 			System.out.println("Operación cancelada");
 		}

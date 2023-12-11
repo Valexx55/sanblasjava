@@ -2,7 +2,9 @@ package apuestasbd.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
@@ -21,6 +23,9 @@ public class EquipoDao {
 	
 	private static final String BORRAR_EQUIPOS = """
 			DELETE FROM bdapuestas.equipos""";
+	
+	private static final String LEER_EQUIPOS = """
+			SELECT * FROM bdapuestas.equipos""";
 	
 	public boolean borrarEquipos ()
 	{
@@ -73,6 +78,36 @@ public class EquipoDao {
 		
 		return insertadosOk;
 		
+	}
+	
+	
+	
+	public List<Equipo> leerEquipos ()
+	{
+		List<Equipo> lEquipos = null;
+		
+			try (Connection connection = BaseDatos.obtenerConexion())
+			{
+				Statement statement = connection.createStatement();
+				ResultSet resultSet = statement.executeQuery(LEER_EQUIPOS);
+				
+				Equipo equipoAux = null;
+				int idequipo = 0;
+				String nombrequipo = null;
+				lEquipos = new ArrayList<Equipo>(); //creo la lista
+				
+				while (resultSet.next())
+				{
+					idequipo = resultSet.getInt("idequipos");
+					nombrequipo = resultSet.getString("nombre");
+					equipoAux = new Equipo(idequipo, nombrequipo);
+					lEquipos.add(equipoAux);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		
+		return lEquipos;
 	}
 	
 	public static void main(String[] args) {
