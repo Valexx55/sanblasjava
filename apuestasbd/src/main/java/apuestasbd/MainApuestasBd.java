@@ -15,19 +15,30 @@ public class MainApuestasBd {
 
 	private static final int MAX_INTENTOS_LOGIN = 3;
 
-	/*
-	 * public static void main(String[] args) {
-	 * 
-	 * 
-	 * boolean salir = false; do {
-	 * 
-	 * int opcionInicio = Pantalla.menuPantallaInicio(); switch (opcionInicio) {
-	 * case 1: // ACCESO System.out.println("Quiere Acceder"); login(); break; case
-	 * 2: // REGISTRO System.out.println("Quiere Registrarse"); registroUsuario();
-	 * break; case 3: // SALIR System.out.println("HASTA PRONTO! Saliendo...");
-	 * salir = true; break; default: System.out.println("OPCIÓN INCORRECTA"); } }
-	 * while (!salir); }
-	 */
+	public static void main(String[] args) {
+
+		boolean salir = false;
+		do {
+
+			int opcionInicio = Pantalla.menuPantallaInicio();
+			switch (opcionInicio) {
+			case 1: // ACCESO
+				System.out.println("Quiere Acceder");
+				login();
+				break;
+			case 2: // REGISTRO
+				System.out.println("Quiere Registrarse");
+				registroUsuario();
+				break;
+			case 3: // SALIR
+				System.out.println("HASTA PRONTO! Saliendo...");
+				salir = true;
+				break;
+			default:
+				System.out.println("OPCIÓN INCORRECTA");
+			}
+		} while (!salir);
+	}
 
 	public static void registroUsuario() {
 
@@ -74,10 +85,6 @@ public class MainApuestasBd {
 			System.exit(0);// finalizo el programa
 		}
 
-		// TODO MODIFICAD EL CÓDIGO PARA QUE AL USUARIO
-		// SE LE AVISE ANTES DEL TERCER INTENTO QUE
-		// SI FALLA SERÁ EXPULSADO
-
 	}
 
 	/**
@@ -85,11 +92,14 @@ public class MainApuestasBd {
 	 * y equipos nuevos
 	 * 
 	 * Si hay partidos
-	 * @throws SQLException 
+	 * 
+	 * @throws SQLException
 	 */
 	public static void generarPartidos() throws SQLException {
 		Connection conexion_compartida = BaseDatos.obtenerConexion();
-		conexion_compartida.setAutoCommit(false);//para manejar la transacción y que cada operación no se haga automáticamente en base datos hasta yo que haga commit manualmente
+		conexion_compartida.setAutoCommit(false);// para manejar la transacción y que cada operación no se haga
+													// automáticamente en base datos hasta yo que haga commit
+													// manualmente
 		try {
 
 			// 0 PREGUNTAR AL USUARIO SI QUIERE BORRAR LOS DATOS / REGENERAR
@@ -101,11 +111,12 @@ public class MainApuestasBd {
 				System.out.println("Equipos " + lEquipos);
 				// GUARDO
 				equipoDao.insertarEquipos(lEquipos, conexion_compartida);
-				
-				//PROVOCAR FALLO para probar transacción 
-				/*String saludo = "h";
-				saludo.charAt(5);*/
-				
+
+				// PROVOCAR FALLO para probar transacción
+				/*
+				 * String saludo = "h"; saludo.charAt(5);
+				 */
+
 				// LEO PARA RECUPERAR EL ID
 				lEquipos = equipoDao.leerEquipos(conexion_compartida);
 
@@ -115,7 +126,7 @@ public class MainApuestasBd {
 				// GUARDAR PARTIDOS
 				PartidoDao partidoDao = new PartidoDao();
 				partidoDao.insertarPartidos(lPartidos, conexion_compartida);
-				
+
 				conexion_compartida.commit();
 
 			} else {
@@ -126,19 +137,18 @@ public class MainApuestasBd {
 			// TODO: handle exception
 			conexion_compartida.rollback();
 			e.printStackTrace();
-		}
-		finally {
+		} finally {
 			conexion_compartida.close();
 		}
 	}
 
-	public static void main(String[] args) {
-		try {
-			MainApuestasBd.generarPartidos();
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+//	public static void main(String[] args) {
+//		try {
+//			MainApuestasBd.generarPartidos();
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 
 }

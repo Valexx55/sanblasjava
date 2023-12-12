@@ -1,0 +1,21 @@
+TAREAS PENDIENTES PARA FINALIZAR LA APLICACIÓN DE APUESTAS
+
+1) VENTANA AJUSTES USUARIO (llamar a métodos ya hechos)
+
+2) MENÚ APUESTAS
+
+	2.1) APOSTAR
+	
+	2.2) VER APUESTAS 
+		
+			2.2.1) MODIFICAR APUESTAS
+			
+			2.2.1) BORRAR APUESTAS
+			
+	2.3) ESTADÍSTICAS
+	
+		2.3.1) FAVORITO DE PARTIDO - a  qué equipo se ha apostado más de un partido -
+		
+		2.3.2) APUESTA MÁS ALTA, MÍNIMA Y MEDIA
+		
+		

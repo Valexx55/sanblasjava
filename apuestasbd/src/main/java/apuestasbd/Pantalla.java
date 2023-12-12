@@ -76,9 +76,9 @@ public class Pantalla {
 	public static int menuPantallaPrincipal() {
 		int opcion = 0;
 		System.out.println("Menú principal");
-		System.out.println("(1) Registrar Apuesta.");
-		System.out.println("(2) Mostrar Apuestas,");
-		System.out.println("(3) Ajustes Usuario.");
+		System.out.println("(1) Apuestas.");
+		System.out.println("(2) Ajustes.");
+		System.out.println("(3) Generar partidos.");
 		System.out.println("(9) Salir.");
 
 		opcion = sc.nextInt();
