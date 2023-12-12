@@ -1,6 +1,7 @@
 package apuestasbd;
 
 import java.io.FileReader;
+import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
@@ -73,77 +74,43 @@ public class BaseDatos {
 	
 	public static void main(String[] args) {
 		
-		//String sql = "INSERT INTO `bdapuestas`.`partidos` (`fecha`,`goles_visitantes`, `goles_local`, `equipo_local`, `equipo_visitante`) VALUES (?, ?, ?, ?, ?)";
-		String sql2 = "DELETE FROM bdapuestas.equipos";
 		
+		//String sql2 = "DELETE FROM bdapuestas.equipos";
 		
-		/*Partido partido = new Partido();
-		Equipo e1 = new Equipo(1, "Real");
-		Equipo e2 = new Equipo(2, "Atleti");
-		
-		partido.setEquipoLocal(e1);
-		partido.setEquipoLocal(e2);
-		partido.setGolesLocal(0);
-		partido.setGolesVisitante(0);
-		partido.setFecha(LocalDate.now());*/
 		
 		
 		try (Connection c = obtenerConexion()){
-			/*PreparedStatement ps = c.prepareStatement(sql);
-			ps.setDate(1, Date.valueOf(partido.getFecha()));
-			ps.setInt(2, 0);
-			ps.setInt(3, 0);
-			ps.setInt(4, e1.getIdequipo());
-			ps.setInt(5, e2.getIdequipo());*/
 			
-			Statement st = c.createStatement();
-			int n =  st.executeUpdate(sql2);
 			
-			//int n = ps.executeUpdate();
+			//Statement st = c.createStatement();
+			CallableStatement cs = c.prepareCall("{call calcular_max_min_media_apuestas (?,?,?)};");
+			cs.registerOutParameter("apuestamax", java.sql.Types.INTEGER);
+			cs.registerOutParameter("apuestamin", java.sql.Types.INTEGER);
+			cs.registerOutParameter("apuestamedia", java.sql.Types.FLOAT);
+			boolean res = cs.execute();
+			System.out.println(res);
+			ResultSet rs = cs.getResultSet();
+			if (rs.next())
+			{
+				System.out.println(rs.getInt("apuestamax"));
+				System.out.println(rs.getInt("apuestamin"));
+				System.out.println(rs.getFloat("apuestamedia"));
+			} else {
+				System.out.println("sin resultados");
+			}
 			
-			System.out.println("Se han modificado " + n + " filas");
+			
+			//int n =  st.executeUpdate(sql2);
+			
+			
+			
+			//System.out.println("Se han modificado " + n + " filas");
 			
 		}catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
 		
-		/*Usuario usuario = buscarExiste("valerianomoreno@gmail.com", "nomeacuerdo");
-		
-		if (usuario!=null)
-		{
-			System.out.println("El usuario existe " + usuario.toString());
-			
-		} else //usuario es null 
-		{
-			System.out.println("El usuario no existe");
-		}
-		
-		
-		usuario = buscarExiste("marcos@justeat.vip", "nomeacuerdo");
-		
-		if (usuario!=null)
-		{
-			System.out.println("El usuario existe " + usuario.toString());
-			
-		} else //usuario es null 
-		{
-			System.out.println("El usuario no existe");
-		}*/
-		
-		/*Usuario usuario = new Usuario(0, "Vinicius", "vini@realmadrid.es", "pozo");
-		
-		if ( insertarUsuario(usuario))
-		{
-			System.out.println("Usuario insertado ");
-		} else {
-			System.out.println("USUARIO NO insertado");
-		}
-		
-		
-		List<Usuario> listabd =  leerUsuarios();
-		System.out.println("La lista tiene " + listabd.size() + " usuarios");
-		System.out.println(listabd);*/
 		
 	}
 	

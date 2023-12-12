@@ -1,7 +1,9 @@
 package apuestasbd;
 
+import java.util.List;
 import java.util.Scanner;
 
+import apuestasbd.modelo.Equipo;
 import apuestasbd.modelo.Usuario;
 
 public class Pantalla {
@@ -23,6 +25,23 @@ public class Pantalla {
 
 	static Scanner sc = new Scanner(System.in);
 
+	public static Equipo mostrarEquipos (List<Equipo> listaEquipos)
+	{
+		Equipo equipoElegido = null;
+		int numEquipo = 1;
+		
+			for (Equipo e : listaEquipos)
+			{
+				System.out.println(numEquipo + "-"+ e.getNombre());
+				numEquipo++;
+			}
+			System.out.println("Elija equipo");
+			numEquipo = sc.nextInt();
+			equipoElegido = listaEquipos.get(numEquipo-1);
+		
+		return equipoElegido;
+	}
+	
 	public static Usuario pedirUsuarioNuevo ()
 	{
 		Usuario usuario = null;
@@ -79,6 +98,20 @@ public class Pantalla {
 		System.out.println("(1) Apuestas.");
 		System.out.println("(2) Ajustes.");
 		System.out.println("(3) Generar partidos.");
+		System.out.println("(9) Salir.");
+
+		opcion = sc.nextInt();
+
+		return opcion;
+
+	}
+	
+	public static int menuApuestas() {
+		int opcion = 0;
+		System.out.println("Menú apuestas");
+		System.out.println("(1) Apostar.");
+		System.out.println("(2) Mis apuestas.");
+		System.out.println("(3) Estadísticas.");
 		System.out.println("(9) Salir.");
 
 		opcion = sc.nextInt();

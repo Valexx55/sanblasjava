@@ -60,11 +60,12 @@ public class MainApuestasBd {
 	public static void login() {
 		int numeroIntentos = 0;
 		boolean encontrado = false;
+		Usuario usuariodeBD = null;
 		do {
 
 			Usuario usuarioLogin = Pantalla.pedirCredenciales(); // DESDE LA CLASE PANTALLA LLAMA A PEDIR CREDENCIALES
 			UsuarioDao usuarioDAO = new UsuarioDao();
-			Usuario usuariodeBD = usuarioDAO.buscarExiste(usuarioLogin.getEmail(), usuarioLogin.getPassword());
+			usuariodeBD = usuarioDAO.buscarExiste(usuarioLogin.getEmail(), usuarioLogin.getPassword());
 			numeroIntentos++;
 			if (numeroIntentos == MAX_INTENTOS_LOGIN - 1) {
 				System.out.println("TE QUEDA 1 INTENTO");
@@ -79,7 +80,46 @@ public class MainApuestasBd {
 		} while ((!encontrado) && (numeroIntentos < MAX_INTENTOS_LOGIN));
 
 		if (encontrado) {
-			Pantalla.menuPantallaPrincipal();
+			/**
+			 * 	System.out.println("Menú principal");
+		System.out.println("(1) Apuestas.");
+		System.out.println("(2) Ajustes.");
+		System.out.println("(3) Generar partidos.");
+		System.out.println("(9) Salir.");
+			 */
+			switch (Pantalla.menuPantallaPrincipal()) {
+			case 1: //apuestas 
+				
+				 
+				 switch (Pantalla.menuApuestas()) {
+				case 1: //apostar
+					//usuariodeBD
+					break;
+				case 2: //mis apuestas
+					break;
+				case 3: //estadísticas
+					break;
+				case 9: //salir
+					break;
+				} 
+				
+				break;
+			case 2: //ajustes
+				
+				break;
+			case 3: //generar partidos
+				try {
+					MainApuestasBd.generarPartidos();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					System.err.println("No se ha podido generar los partidos");
+					e.printStackTrace();
+				}
+				break;
+			case 9: //salir 
+				break;
+			
+			} 
 		} else {
 			System.out.println("NÚMERO DE INTENTOS SUPERADO");
 			System.exit(0);// finalizo el programa
