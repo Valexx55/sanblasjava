@@ -4,6 +4,7 @@ import java.util.List;
 
 import apuestasbd.Pantalla;
 import apuestasbd.dao.EquipoDao;
+import apuestasbd.dao.PartidoDao;
 
 public class Apuesta {
 	
@@ -22,9 +23,12 @@ public class Apuesta {
 		//TODO LEER LOS EQUIPOS QUE HAY EN BD
 		EquipoDao equipoDao = new EquipoDao();
 		List<Equipo> listaEquipos = equipoDao.leerEquipos();
-		Equipo equipoApostar = Pantalla.mostrarEquipos(listaEquipos);
+		Equipo equipoApostar = Pantalla.mostrarYElgirEquipoApuesta(listaEquipos);
 		//2 listamos partidos de ese equipo
+		PartidoDao partidoDao = new PartidoDao();
+		List<Partido> lp = partidoDao.buscarPartidosEquipo(equipoApostar);
 		//3 elegimos partido
+		Partido partidoApuesta = Pantalla.mostrarYElegirPartidoApuesta(lp);
 		//4 ponemos resultado
 		//5 dienero apostado
 		

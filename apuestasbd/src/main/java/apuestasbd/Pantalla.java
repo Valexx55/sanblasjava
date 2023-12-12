@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import apuestasbd.modelo.Equipo;
+import apuestasbd.modelo.Partido;
 import apuestasbd.modelo.Usuario;
 
 public class Pantalla {
@@ -25,7 +26,7 @@ public class Pantalla {
 
 	static Scanner sc = new Scanner(System.in);
 
-	public static Equipo mostrarEquipos (List<Equipo> listaEquipos)
+	public static Equipo mostrarYElgirEquipoApuesta (List<Equipo> listaEquipos)
 	{
 		Equipo equipoElegido = null;
 		int numEquipo = 1;
@@ -118,6 +119,13 @@ public class Pantalla {
 
 		return opcion;
 
+	}
+	
+	public static Partido mostrarYElegirPartidoApuesta (List<Partido> lp)
+	{
+		Partido partido = null;
+		
+		return partido;
 	}
 	
 	public static boolean confirmarGenerarPartidos() {
