@@ -83,21 +83,14 @@ public class BaseDatos {
 			
 			
 			//Statement st = c.createStatement();
-			CallableStatement cs = c.prepareCall("{call calcular_max_min_media_apuestas (?,?,?)};");
-			cs.registerOutParameter("apuestamax", java.sql.Types.INTEGER);
-			cs.registerOutParameter("apuestamin", java.sql.Types.INTEGER);
-			cs.registerOutParameter("apuestamedia", java.sql.Types.FLOAT);
-			boolean res = cs.execute();
-			System.out.println(res);
-			ResultSet rs = cs.getResultSet();
-			if (rs.next())
-			{
-				System.out.println(rs.getInt("apuestamax"));
-				System.out.println(rs.getInt("apuestamin"));
-				System.out.println(rs.getFloat("apuestamedia"));
-			} else {
-				System.out.println("sin resultados");
-			}
+			CallableStatement cs = c.prepareCall("{call calcular_max_min_media_apuestas (?,?,?)}");
+			cs.registerOutParameter(1, java.sql.Types.INTEGER);
+			cs.registerOutParameter(2, java.sql.Types.INTEGER);
+			cs.registerOutParameter(3, java.sql.Types.FLOAT);
+			cs.execute();
+			System.out.println(cs.getInt(1));
+			System.out.println(cs.getInt(2));
+			System.out.println(cs.getFloat(3));
 			
 			
 			//int n =  st.executeUpdate(sql2);
