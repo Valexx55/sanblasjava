@@ -6,9 +6,30 @@ import java.util.HashMap;
 import java.util.Map;
 
 import apuestasbd.BaseDatos;
+import apuestasbd.modelo.Equipo;
+import apuestasbd.modelo.Partido;
 
 public class ApuestaDao {
 
+	//TODO FUNCIONALIDAD DE EQUIPO FAVORITO EN APUESTAS by Harrison
+	/**
+	 * Este método obtiene el equipo favorito de un partido,
+	 * en base a las apuestas realizadas sobre ese partido.
+	 * 
+	 * Un equipo es el favorito si tiene más apuestas con resultado
+	 * a favor que otro
+	 * 
+	 * @param partido
+	 * @return el equipo favorito o null si no hay un favorito
+	 */
+	public Equipo obtenerEquipoFavoritoPartido (Partido partido)
+	{
+		Equipo equipoFavorito = null;
+		
+		return equipoFavorito;
+	}
+	
+	
 	public Map<String, Float> obtenerEstadisticosApuestas() {
 		Map<String, Float> mapaEstadisticas = null;
 
