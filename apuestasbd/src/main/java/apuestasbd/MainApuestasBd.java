@@ -3,7 +3,9 @@ package apuestasbd;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Map;
 
+import apuestasbd.dao.ApuestaDao;
 import apuestasbd.dao.EquipoDao;
 import apuestasbd.dao.PartidoDao;
 import apuestasbd.dao.UsuarioDao;
@@ -14,7 +16,7 @@ import apuestasbd.modelo.Usuario;
 public class MainApuestasBd {
 
 	private static final int MAX_INTENTOS_LOGIN = 3;
-
+/*
 	public static void main(String[] args) {
 
 		boolean salir = false;
@@ -38,6 +40,12 @@ public class MainApuestasBd {
 				System.out.println("OPCIÓN INCORRECTA");
 			}
 		} while (!salir);
+	}*/
+	
+	public static void main(String[] args) {
+		ApuestaDao apuestaDao = new ApuestaDao();
+		Map<String, Float> mapaStats  = apuestaDao.obtenerEstadisticosApuestas();
+		System.out.println(mapaStats);
 	}
 
 	public static void registroUsuario() {
@@ -98,6 +106,9 @@ public class MainApuestasBd {
 				case 2: //mis apuestas
 					break;
 				case 3: //estadísticas
+					//mostrar maximo, minimo y media de las apuestas
+					
+					
 					break;
 				case 9: //salir
 					break;

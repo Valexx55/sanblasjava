@@ -107,6 +107,10 @@ public class Dni {
 		
 		return dnimayor;
 	}
+	@Override
+	public String toString() {
+		return "Dni [numero=" + numero + ", letra=" + letra + "]";
+	}
 	
 	
 	
