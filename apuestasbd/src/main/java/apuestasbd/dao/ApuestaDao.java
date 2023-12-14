@@ -17,6 +17,14 @@ import apuestasbd.modelo.Partido;
 public class ApuestaDao {
 
 	public static final String LEER_APUESTAS_PARTIDO = "SELECT * FROM bdapuestas.apuestas a WHERE a.partido=?;";
+	
+	
+	public boolean guardarApuesta (Apuesta apuesta)
+	{
+		boolean ok = false;
+		
+		return ok;
+	}
 
 	public List<Apuesta> leerApuestasPartido(Partido partido) {
 		List<Apuesta> lApuestas = null;

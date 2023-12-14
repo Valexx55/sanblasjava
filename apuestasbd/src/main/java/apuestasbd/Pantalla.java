@@ -3,6 +3,7 @@ package apuestasbd;
 import java.util.List;
 import java.util.Scanner;
 
+import apuestasbd.modelo.Apuesta;
 import apuestasbd.modelo.Equipo;
 import apuestasbd.modelo.Partido;
 import apuestasbd.modelo.Usuario;
@@ -42,6 +43,32 @@ public class Pantalla {
 		
 		return equipoElegido;
 	}
+	
+	public static Apuesta pedirDatosApuesta ()
+	{
+		Apuesta apuestaNueva = null;
+		
+			//PEDIR VALOR
+			System.out.println("Introduzca cantidad ");
+			float valor = sc.nextFloat();
+			//PEDIR GOLES LOCAL
+			System.out.println("Introduzca Goles Local ");
+			int golesLocal = sc.nextInt();
+			//PEDIR GOLES VISITANTE
+			System.out.println("Introduzca Goles Visitante ");
+			int golesVisintante = sc.nextInt();
+			
+			apuestaNueva = new Apuesta();
+			apuestaNueva.setValor(valor);
+			apuestaNueva.setGoles_local(golesLocal);
+			apuestaNueva.setGoles_visitante(golesVisintante);
+			
+		
+		
+		return apuestaNueva;
+		
+	}
+	
 	
 	public static Usuario pedirUsuarioNuevo ()
 	{

@@ -18,7 +18,6 @@ public class Apuesta {
 	
 	
 	public Apuesta() {
-		// TODO Auto-generated constructor stub
 	}
 	
 	public Apuesta(int id, float valor, int goles_local, int goles_visitante, int idUsuario, int idPartido) {
@@ -130,7 +129,6 @@ public class Apuesta {
 		boolean ok =false;
 		
 		//1 a qué equipo
-		//TODO LEER LOS EQUIPOS QUE HAY EN BD
 		EquipoDao equipoDao = new EquipoDao();
 		List<Equipo> listaEquipos = equipoDao.leerEquipos();
 		Equipo equipoApostar = Pantalla.mostrarYElgirEquipoApuesta(listaEquipos);
@@ -139,11 +137,16 @@ public class Apuesta {
 		List<Partido> lp = partidoDao.buscarPartidosEquipo(equipoApostar);
 		//3 elegimos partido
 		Partido partidoApuesta = Pantalla.mostrarYElegirPartidoApuesta(lp);
-		//TODO HACED 4 Y 5 PARA CREAR UN OBJETO APUESTA
+		
 		//4 ponemos resultado
 		//5 dienero apostado
+		Apuesta apuesta = Pantalla.pedirDatosApuesta();
+		//asignar a la apuesta el usuario y el partido
+		apuesta.setIdPartido(partidoApuesta.getId());
+		apuesta.setIdUsuario(usuario.getId());
 		
 		//6 GUARDAR 
+		//TODO GUARDAR APUESTA
 		
 		return ok;
 	}
