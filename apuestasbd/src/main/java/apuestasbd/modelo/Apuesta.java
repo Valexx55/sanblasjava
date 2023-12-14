@@ -8,6 +8,116 @@ import apuestasbd.dao.PartidoDao;
 
 public class Apuesta {
 	
+	private int id;
+	private float valor;
+	private int goles_local;
+	private int goles_visitante;
+	private int idUsuario;
+	private int idPartido;
+	
+	
+	
+	public Apuesta() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public Apuesta(int id, float valor, int goles_local, int goles_visitante, int idUsuario, int idPartido) {
+		super();
+		this.id = id;
+		this.valor = valor;
+		this.goles_local = goles_local;
+		this.goles_visitante = goles_visitante;
+		this.idUsuario = idUsuario;
+		this.idPartido = idPartido;
+	}
+
+
+
+
+	public int getId() {
+		return id;
+	}
+
+
+
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+
+
+
+	public float getValor() {
+		return valor;
+	}
+
+
+
+
+	public void setValor(float valor) {
+		this.valor = valor;
+	}
+
+
+
+
+	public int getGoles_local() {
+		return goles_local;
+	}
+
+
+
+
+	public void setGoles_local(int goles_local) {
+		this.goles_local = goles_local;
+	}
+
+
+
+
+	public int getGoles_visitante() {
+		return goles_visitante;
+	}
+
+
+
+
+	public void setGoles_visitante(int goles_visitante) {
+		this.goles_visitante = goles_visitante;
+	}
+
+
+
+
+	public int getIdUsuario() {
+		return idUsuario;
+	}
+
+
+
+
+	public void setIdUsuario(int idUsuario) {
+		this.idUsuario = idUsuario;
+	}
+
+
+
+
+	public int getIdPartido() {
+		return idPartido;
+	}
+
+
+
+
+	public void setIdPartido(int idPartido) {
+		this.idPartido = idPartido;
+	}
+
+
+
+
 	/**
 	 * El método permite que el usuario haga una apuesta sobre un
 	 * partido
