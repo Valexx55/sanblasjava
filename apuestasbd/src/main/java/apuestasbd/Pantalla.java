@@ -124,6 +124,19 @@ public class Pantalla {
 	public static Partido mostrarYElegirPartidoApuesta (List<Partido> lp)
 	{
 		Partido partido = null;
+		Partido paux = null;
+		int numPartido = 1;
+		int partidoSeleccionado = 0;
+		
+			for (numPartido=0; lp.size()<numPartido; numPartido++)
+			{
+				paux = lp.get(numPartido);
+				System.out.println(numPartido+1 + " " + paux.getEquipoLocal().getNombre()+" - " + paux.getEquipoVisitante().getNombre() + " " + paux.getFecha());
+			}
+			
+			//leo el partido
+			partidoSeleccionado = sc.nextInt();
+			partido = lp.get(partidoSeleccionado-1);
 		
 		return partido;
 	}

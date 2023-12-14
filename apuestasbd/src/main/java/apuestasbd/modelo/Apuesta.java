@@ -139,8 +139,11 @@ public class Apuesta {
 		List<Partido> lp = partidoDao.buscarPartidosEquipo(equipoApostar);
 		//3 elegimos partido
 		Partido partidoApuesta = Pantalla.mostrarYElegirPartidoApuesta(lp);
+		//TODO HACED 4 Y 5 PARA CREAR UN OBJETO APUESTA
 		//4 ponemos resultado
 		//5 dienero apostado
+		
+		//6 GUARDAR 
 		
 		return ok;
 	}

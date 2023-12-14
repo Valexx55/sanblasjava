@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-12-13T12:47:12.670Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="Lq76hkW2GqxlS9-RdEgX" version="22.1.2" type="device">
+<mxfile host="Electron" modified="2023-12-14T10:54:20.604Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="UnsW96DjXdGGM7jn-ocr" version="22.1.2" type="device">
   <diagram name="Página-1" id="6ri0GXHKn8S3LQYCnVM0">
-    <mxGraphModel dx="1016" dy="538" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1018" dy="540" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -21,7 +21,7 @@
         <mxCell id="nggsWB1C2XaXtwyBXX7h-2" value="A/B/M/C&lt;br&gt;APUESTA" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="414" y="30" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="5jzpaCUNolcwSDhed0aJ-1" value="SACAR EL FAVORITO DE UN PARTIDO" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="5jzpaCUNolcwSDhed0aJ-1" value="SACAR EL FAVORITO DE UN PARTIDO" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FF66FF;" parent="1" vertex="1">
           <mxGeometry x="650" y="80" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="5jzpaCUNolcwSDhed0aJ-2" value="ALTA&amp;nbsp;&lt;br&gt;USUARIO" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FF66FF;" parent="1" vertex="1">

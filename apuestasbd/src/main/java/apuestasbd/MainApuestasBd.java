@@ -107,7 +107,9 @@ public class MainApuestasBd {
 					break;
 				case 3: //estadísticas
 					//mostrar maximo, minimo y media de las apuestas
-					
+					ApuestaDao apuestaDao = new ApuestaDao();
+					Map<String, Float> mapaEstats = apuestaDao.obtenerEstadisticosApuestas();
+					System.out.println(mapaEstats);
 					
 					break;
 				case 9: //salir

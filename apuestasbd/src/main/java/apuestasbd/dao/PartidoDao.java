@@ -33,7 +33,15 @@ public class PartidoDao {
 	public static final String CONSULTA_NUM_PARITIDOS = "SELECT COUNT(*) FROM bdapuestas.partidos;"; 
 
 	//TODO mejora: consultar sólo los partidos de fecha posterior a la actual
-	public static final String CONSULTA_PARITIDOS_EQUIPO = "SELECT * FROM bdapuestas.partidos WHERE equipo_local=? OR equipo_visitante=?;";
+	//public static final String CONSULTA_PARITIDOS_EQUIPO = "SELECT * FROM bdapuestas.partidos WHERE equipo_local=? OR equipo_visitante=?;";
+	public static final String CONSULTA_PARITIDOS_EQUIPO = """
+			SELECT p.idpartidos, p.fecha, p.equipo_visitante, p.equipo_local, 
+			v.nombre AS "nombre_visitante", l.nombre AS "nombre_local"
+			FROM partidos p 
+			LEFT JOIN equipos l ON p.equipo_local=l.idequipos
+			LEFT JOIN equipos v ON p.equipo_visitante=v.idequipos
+			WHERE p.equipo_local=? OR p.equipo_visitante=?;
+			"""; 
 	
 	
 	//TODO seleccionar los partidos de un equipo 
@@ -51,6 +59,8 @@ public class PartidoDao {
 			int idpartido = 0;
 			Date fecha = null;
 			int idequipoLocal, idequipoVisitante = 0;
+			String nombre_visitante = null;
+			String nombre_local = null;
 			
 			listP = new ArrayList<Partido>();
 			
@@ -60,6 +70,8 @@ public class PartidoDao {
 				fecha = resultados.getDate("fecha");
 				idequipoLocal = resultados.getInt("equipo_local");
 				idequipoVisitante = resultados.getInt("equipo_visitante");
+				nombre_local = resultados.getString("nombre_local");
+				nombre_visitante = resultados.getString("nombre_visitante");
 				
 				partido_aux = new Partido();
 				partido_aux.setId(idpartido);
@@ -67,9 +79,11 @@ public class PartidoDao {
 				
 				Equipo equipoLocal = new Equipo();
 				equipoLocal.setIdequipo(idequipoLocal);
+				equipoLocal.setNombre(nombre_local);
 				
 				Equipo equipoVisitante = new Equipo();
 				equipoVisitante.setIdequipo(idequipoVisitante);
+				equipoVisitante.setNombre(nombre_visitante);
 				
 				partido_aux.setEquipoLocal(equipoLocal);
 				partido_aux.setEquipoVisitante(equipoVisitante);
@@ -79,6 +93,7 @@ public class PartidoDao {
 			
 			} catch (Exception e) {
 				// TODO: handle exception
+				e.printStackTrace();
 			}
 			
 			return listP;
