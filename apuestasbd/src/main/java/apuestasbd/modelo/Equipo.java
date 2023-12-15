@@ -46,7 +46,7 @@ public class Equipo implements Comparable<Equipo>{
 
 	public static void main(String[] args) {
 		
-		/*Equipo equipo = new Equipo(3, "FC Barcelona");
+		Equipo equipo = new Equipo(3, "FC Barcelona");
 		Equipo equipo1 = new Equipo(2, "Real Madrid");
 		Equipo equipo2 = new Equipo(1, "Atlético de Madrid");
 		
@@ -63,14 +63,14 @@ public class Equipo implements Comparable<Equipo>{
 		System.out.println("lista equipos tras barajar");
 		System.out.println(listaEquipos+ "\n");
 		
-		//Collection
+		/*Collection*/
 		ComparadorEquiposPorId ce = new ComparadorEquiposPorId();
 		Collections.sort(listaEquipos, ce);//ORDEN TOTAL -- sort invoca al Comparator.compare (o1,o2)
 		System.out.println("lista equipos tras ordenar por id -TOTAL-");
 		System.out.println(listaEquipos+ "\n");
 		Collections.sort(listaEquipos);//ORDEN NATURAL -- sort Equipo.compareTo(equipo);
 		System.out.println("lista equipos tras ordenar por Nombre -NATURAL-");
-		System.out.println(listaEquipos+ "\n");*/
+		System.out.println(listaEquipos+ "\n");
 		
 		List<Equipo> le = Equipo.cargarListaEquipos("src/main/resources/equipos.txt");
 		System.out.println(le);

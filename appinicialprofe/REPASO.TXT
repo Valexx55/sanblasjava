@@ -80,3 +80,11 @@ this.- Palabra reservada del lenguaje, que tiene
  Por ejemplo, cuando Collections.sort() invoca
  a compareTo
       
+PROGRAMACIÓN FUNCIONAL EN JAVA
+
+Lambdas, 
+funciones flecha
+función anónima
+
+HACE referencia al mismo concepto: Programación Funcional
+

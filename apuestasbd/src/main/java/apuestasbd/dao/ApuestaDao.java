@@ -9,6 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+
 import apuestasbd.BaseDatos;
 import apuestasbd.modelo.Apuesta;
 import apuestasbd.modelo.Equipo;
@@ -18,11 +20,44 @@ public class ApuestaDao {
 
 	public static final String LEER_APUESTAS_PARTIDO = "SELECT * FROM bdapuestas.apuestas a WHERE a.partido=?;";
 	
+	private static Logger log = Logger.getLogger("mylog");
 	
-	public boolean guardarApuesta (Apuesta apuesta)
-	{
+	private static final String GUARDAR_APUESTA = "INSERT INTO `bdapuestas`.`apuestas` (`valor`, `goles_visitante`, `goles_local`, `usuario`, `partido`) VALUES (?,?,?,?,?);";
+
+	/**
+	 * Este método persiste en la base de datos una nueva apuesta
+	 * 
+	 * @param apuesta la apuesta que queremos insertar
+	 * @return true si la apuesta se generó correctamente false en caso contrario
+	 */
+	public boolean guardarApuesta(Apuesta apuesta) {
+		
 		boolean ok = false;
 		
+		log.debug("en guardarApuesta()");
+		try (Connection conexion = BaseDatos.obtenerConexion()) {
+
+			log.debug("Conexión obtenida");
+			PreparedStatement ps = conexion.prepareStatement(GUARDAR_APUESTA);
+			ps.setFloat(1, apuesta.getValor());
+			ps.setInt(2, apuesta.getGoles_visitante());
+			ps.setInt(3, apuesta.getGoles_local());
+			ps.setInt(4, apuesta.getIdUsuario());
+			ps.setInt(5, apuesta.getIdPartido());
+			if (ps.executeUpdate() == 1) {
+				log.debug ("Apuesta guardada correctamente " + apuesta.toString());
+				ok = true;
+
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			log.error("Error al insertar la apuesta " + apuesta.toString(), e);
+			ok = false;
+			
+			
+		}
+
 		return ok;
 	}
 

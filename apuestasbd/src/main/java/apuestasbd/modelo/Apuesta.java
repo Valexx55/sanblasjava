@@ -117,6 +117,12 @@ public class Apuesta {
 
 
 
+	@Override
+	public String toString() {
+		return "Apuesta [id=" + id + ", valor=" + valor + ", goles_local=" + goles_local + ", goles_visitante="
+				+ goles_visitante + ", idUsuario=" + idUsuario + ", idPartido=" + idPartido + "]";
+	}
+
 	/**
 	 * El método permite que el usuario haga una apuesta sobre un
 	 * partido
