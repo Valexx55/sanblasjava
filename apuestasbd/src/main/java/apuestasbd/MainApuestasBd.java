@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.log4j.Logger;
+
 import apuestasbd.dao.ApuestaDao;
 import apuestasbd.dao.EquipoDao;
 import apuestasbd.dao.PartidoDao;
@@ -16,6 +18,7 @@ import apuestasbd.modelo.Usuario;
 public class MainApuestasBd {
 
 	private static final int MAX_INTENTOS_LOGIN = 3;
+	private static Logger log = Logger.getLogger("mylog");
 /*
 	public static void main(String[] args) {
 
@@ -43,9 +46,11 @@ public class MainApuestasBd {
 	}*/
 	
 	public static void main(String[] args) {
+		log.debug("Inicia mi aplicación de apuestas");
 		ApuestaDao apuestaDao = new ApuestaDao();
 		Map<String, Float> mapaStats  = apuestaDao.obtenerEstadisticosApuestas();
 		System.out.println(mapaStats);
+		log.error("HA HABIDO UN ERROR!!!");
 	}
 
 	public static void registroUsuario() {
