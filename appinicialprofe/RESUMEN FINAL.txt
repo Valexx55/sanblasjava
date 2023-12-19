@@ -1,0 +1,133 @@
+BASICO PROGRAMACIÓN
+
+	bucle
+	apis
+	XML
+	PARADIGMA - forma de pensar - lenguajes
+	if TERNARIO
+
+BÁSICO JAVA
+
+		this.- Palabra reservada del lenguaje, que tiene
+		2 posibles significados, dependiendo se su ámbito
+		(en qué función/método aparece)
+  
+	   1) si this aparece en el constructor
+    	  representa el nuevo objeto / la nueva instancia
+          que se está creando
+      	  (p ej: el nuevo String, el nuevo DNI o la nueva Apuesta)
+      
+   		2) En cualquier otro ámbito / otra función ó método
+           this representa el objeto llamante
+
+	CLASSPATH.- Directorio donde JAVA (máquina) busca los .class
+
+	BEAN / POJO: Clase básica de java
+	son sus atributos, métodos de acceso
+	y constructor (Alumno, Apuesta, etc.)
+	
+	JDK: Java Development Kit 
+     Paquete de software que incluye 
+     Todo lo necesario para poder programar 
+     en Java y ejecutar
+     
+	JSE : Java Standard Edition
+      	Todas las clases que vienen de serie
+      	17
+
+	equals - COMPARAR
+	paquete
+	estatico
+	métodos
+	herencias 
+	POLIMORFISMO.- Es una característica del lenguaje
+	derivada de la Herencia. Java identifica al método más
+	concreto en la jerarquía: equals, toString (Object)
+	
+	CASTING: Conversión de tipos
+	String saludo = "HOLA";
+	Object o = (Object) saludo;
+	
+	NOMBE CANONICO DE UNA CLASE
+	La clase, con su paquete
+	java.lang.String
+	
+	SUPER Palabra reservada que hace referencia a la clase/método del padre
+
+ARRAYS
+FICHEROS
+
+	properties
+
+
+COLECCIONES
+
+	compare -ORDENAR
+	mapas
+	GENÉRICOS <T>
+	LIST Vs ARRAY
+	
+BASES DE DATOS
+	
+	PreparedStatement - Tipo API JDBC para ejcutara consultas con parámetros
+	CRUD -. Create Read Update Delelte / CLAB
+	
+	CLAVE PRIMARIA (primary key) Columna de una tabla, que identifica al registro/fila unívocamente
+	(id)
+	
+	CLAVE AJENA (foreign key) la clave primaria de otra tabla
+		
+EXCEPCIONES
+FECHAS
+LAMBDAS
+NOVEDADES JAVA
+DISEÑO UML
+GIT
+ENTORNO
+	
+	DEPURACION- Cucaracha, puntos de ruptura, f5, f6, f8
+		
+LOG
+	log - LOG4J
+MAVEN
+
+	pom.xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

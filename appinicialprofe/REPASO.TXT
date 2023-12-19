@@ -21,14 +21,7 @@ PASOS PARA DEFINIR UNA FUNCIÓN o MÉTODO
 Clase : Concepto / Tipo
 Objecto: Instancia de clase
 
-JDK: Java Development Kit 
-     Paquete de software que incluye 
-     Todo lo necesario para poder programar 
-     en Java y ejecutar
-     
-JSE : Java Standard Edition
-      Todas las clases que vienen de serie
-      17
+
       
 Herencia/Object
 

@@ -1,5 +1,6 @@
 package appinicialprofe.fortaleza;
 
+@FunctionalInterface
 public interface Fortaleza {
 	
 	/**

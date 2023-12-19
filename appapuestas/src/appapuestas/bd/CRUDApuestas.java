@@ -4,6 +4,7 @@ import java.util.List;
 
 import appapuestas.bean.Apuesta;
 
+//@FunctionalInterface
 public interface CRUDApuestas {
 	
 	//escribir las cabaceras de los métoso para
