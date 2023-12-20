@@ -1,10 +1,27 @@
 BASICO PROGRAMACIÓN
 
 	bucle
+		for / foreach N
+		while 0-n
+		do while 1-n
+		
+	condicionales
+		
+		if (else if)
+		switch
+		
 	apis
 	XML
 	PARADIGMA - forma de pensar - lenguajes
 	if TERNARIO
+	PascalCase .- Nomenclatura para clases
+	camelCase .- Nomenclatura para métodos
+	int, float, numero --> 0
+	char --> ' '
+	String / cualquier objeto --> null
+	boolean --> false
+	
+	CHARSET - UTF-8 encoding
 
 BÁSICO JAVA
 
@@ -53,11 +70,64 @@ BÁSICO JAVA
 	java.lang.String
 	
 	SUPER Palabra reservada que hace referencia a la clase/método del padre
+	
+	.java .- Extensión del código fuente de una clase
+	.class .- Extensión del bytecode código máquina de una clase
+	.jar .- Conjunto de .class comprimidos (zip)
+	
+	Clase : Concepto / Tipo
+	Objecto: Instancia de clase
+
+
+      
+	Herencia/Object
+
+	Paquete: "Carpeta" que contiene clases relacionadas
+	
+	 SOBRECARGA / OVERLOAD: Ocurre cuando tengo un mismo método (mismo nombre)
+ 	 con distintos parámetros.
+ 
+ 	SOBREESCRITURA / OVERRIDE: Cuando en una clase
+ 	hija redefino un método de la clase padre
+ 	Los métodos sobreescritos normalmente llevan
+ 	la anotación @Override encima de su cabecera
+ 	pero no es obligatorio
+ 	
+ 	
+ 	 ATRIBUTOS Y STATIC: Se dice que un atributo es estático si está
+ 	definido a nivel de Clase (no de objeto) Es decir, está compartido
+ 	por todos los objetos/instancias de la Clase.
+ 
+ 	Los otros atributos "dinámicos" son lo que son distintos para cada
+ 	objeto. Cada objeto tiene los suyos propios.
+ 	
+ 	 ESTADO DE UN OBJETO O ESTADO: El valor de los atributos
+ 	 de un objeto en un momento dado
+ 	 
+ 	  CALLBACK: "Lamada por detrás". Ocurre cuando 
+ 	a un función mía, le llama otro programa (Java)
+ 	Por ejemplo, cuando Collections.sort() invoca
+ 	a compareTo
 
 ARRAYS
+	
+	TAMAÑO FIJO (EMPIEZAN en CERO)
+	Object [] - cualquier tipo -
+	int[][] - array bidimensional
+	args[] - argumentos que recibe el main
+
 FICHEROS
 
 	properties
+		clave-valor
+		
+	java.io
+		File
+		FileReader
+		
+	java.nio
+		Path
+		Files
 
 
 COLECCIONES
@@ -76,13 +146,63 @@ BASES DE DATOS
 	(id)
 	
 	CLAVE AJENA (foreign key) la clave primaria de otra tabla
+	
+	JDBC
+	
+		DriverManager
+		Connection
+		Statement / PreparedStament / CallableStament
+		Resultset
+		
+	VIEWS
+	PROCEDMIENTOS ALMACENADOS
 		
 EXCEPCIONES
+
+	try-catch-finally
+	try con recursos
+	Throwable
+	Checked Exceptions / vs Unchecked (Runtime)
+
 FECHAS
+	
+	Date
+	LocalDate
+	LocalTime
+	LocalDateTime
+		
+	
 LAMBDAS
+
+	programación funcional en java (funciones flecha, funciones anónimas)
+	Interfaces funcionales
+	Streams operaciones intermedias / finales "navaja suiza" para colecciones
+	
+	
 NOVEDADES JAVA
+
+	var - inferencia tipo
+	textblocks  - string mutilínea """
+	swtich moderno 
+	try con recursos
+
 DISEÑO UML
+
+	UNIFIED MODEL LANGUAGE
+	DIAGRAMAS ESTRUCTURALES
+		
+		DIAGRAMA DE CLASES / PAQUETES
+		DIAGRAMA DE PANTALLAS
+	
+	DIAGRAMAS FUNCIONALES
+		
+		DIAGRAMA DE CASOS DE USO
+		DIAGRAMA DE ACTIVIDAD / BMP
+	
 GIT
+
+	SISTEMA DE CONTROL DE VERSIONES	
+	
 ENTORNO
 	
 	DEPURACION- Cucaracha, puntos de ruptura, f5, f6, f8
